@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://meteor.com">
-    <img alt="Meteor.js" src="https://dmtgy0px4zdqn.cloudfront.net/images/meteor-logo.webp" width="100" />
+    <img alt="Meteor.js" src="https://dmtgy0px4zdqn.cloudfront.net/images/meteor-logo.webp" width="200" />
   </a>
   <br>
   SaaS Boilerplate
