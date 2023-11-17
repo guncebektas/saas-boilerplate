@@ -2,7 +2,7 @@
   "name": "advacado",
   "private": true,
   "scripts": {
-    "start": "MONGO_URL=mongodb://localhost:27017/saas meteor -s settings.json --port 3000",
+    "start": "MONGO_URL=mongodb://localhost:27017/saas meteor --exclude-archs web.browser.legacy,web.cordova --settings settings.json --port 3000",
     "simulate-production": "MONGO_URL=mongodb://localhost:27017/saas meteor -s settings.json --port 3000 --production",
     "start-warn-old-api": "MONGO_URL=mongodb://localhost:27017/saas WARN_WHEN_USING_OLD_API=true meteor -s settings.json --port 3000",
     "start-verbose": "MONGO_URL=mongodb://localhost:27017/saas NODE_OPTIONS=--trace-warnings meteor -s settings.json --port 3000 --verbose",
@@ -26,11 +26,14 @@
     "cypress": "^13.4.0",
     "flowbite": "^2.0.0",
     "flowbite-react": "^0.6.4",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "meteor-node-stubs": "^1.2.1",
     "postcss": "^8.4.12",
     "postcss-load-config": "^3.1.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "sort-by": "^1.2.0",
     "tailwindcss": "^3.0.23"
   },
   "meteor": {
@@ -39,5 +42,8 @@
       "server": "server/main.js"
     },
     "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "react-router-dom": "^6.18.0"
   }
 }

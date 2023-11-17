@@ -41,7 +41,7 @@ export const Header = () => {
             </svg>
             <span className="sr-only">Toggle sidebar</span>
           </button>
-          <a href="https://meteor.com" className="flex items-center justify-between mr-4">
+          <a href="/" className="flex items-center justify-between mr-4">
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 400 400">
                 <g fill="#DE4F4F">
@@ -262,98 +262,6 @@ export const Header = () => {
                     className="text-xs font-medium text-primary-600 dark:text-primary-500"
                   >
                     44 minutes ago
-                  </div>
-                </div>
-              </a>
-              <a
-                href="#"
-                className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
-              >
-                <div className="flex-shrink-0">
-                  <img
-                    className="w-11 h-11 rounded-full"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
-                    alt="Roberta Casas image"
-                  />
-                  <div
-                    className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white dark:border-gray-700"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="w-3 h-3 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-                <div className="pl-3 w-full">
-                  <div
-                    className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
-                  >
-                    <span className="font-semibold text-gray-900 dark:text-white"
-                    >Leslie Livingston</span
-                    >
-                    mentioned you in a comment:
-                    <span
-                      className="font-medium text-primary-600 dark:text-primary-500"
-                    >@bonnie.green</span
-                    >
-                    what do you say?
-                  </div>
-                  <div
-                    className="text-xs font-medium text-primary-600 dark:text-primary-500"
-                  >
-                    1 hour ago
-                  </div>
-                </div>
-              </a>
-              <a
-                href="#"
-                className="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-600"
-              >
-                <div className="flex-shrink-0">
-                  <img
-                    className="w-11 h-11 rounded-full"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png"
-                    alt="Robert image"
-                  />
-                  <div
-                    className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white dark:border-gray-700"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="w-3 h-3 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-                <div className="pl-3 w-full">
-                  <div
-                    className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
-                  >
-                    <span className="font-semibold text-gray-900 dark:text-white"
-                    >Robert Brown</span
-                    >
-                    posted a new video: Glassmorphism - learn how to implement
-                    the new design trend.
-                  </div>
-                  <div
-                    className="text-xs font-medium text-primary-600 dark:text-primary-500"
-                  >
-                    3 hours ago
                   </div>
                 </div>
               </a>
@@ -635,14 +543,14 @@ export const Header = () => {
             >
               <li>
                 <a
-                  href="#"
+                  href="/profile"
                   className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
                 >My profile</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/settings"
                   className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
                 >Account settings</a
                 >
@@ -692,7 +600,8 @@ export const Header = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://flowbite.com/"
+                  target="_blank"
                   className="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >
                   <span className="flex items-center">
@@ -709,7 +618,7 @@ export const Header = () => {
                         clipRule="evenodd"
                       ></path>
                     </svg>
-                    Pro version
+                    Flowbite Pro
                   </span>
                   <svg
                     aria-hidden="true"
@@ -733,9 +642,9 @@ export const Header = () => {
             >
               <li>
                 <a
-                  href="#"
+                  href="/logout"
                   className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Sign out</a
+                >Logout</a
                 >
               </li>
             </ul>
