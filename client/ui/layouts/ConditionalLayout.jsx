@@ -5,7 +5,7 @@ import {Router} from "../../routes/Router.js";
 import {AuthToken} from "../pages/auth/AuthToken.jsx";
 
 const InnerLayout = ({children, onlyLogged, onlyAnonymous}) => {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
 
   if (isLoggedIn) {
     return (
