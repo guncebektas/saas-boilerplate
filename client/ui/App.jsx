@@ -11,7 +11,7 @@ export function App() {
   return (
     <Flowbite>
       <BrowserRouter>
-        <div className="antialiased bg-indigo-50 dark:bg-gray-900">
+        <div className="antialiased bg-indigo-50 dark:bg-gray-800">
           <div className="min-h-screen mx-auto">
             <ConditionalLayout/>
           </div>

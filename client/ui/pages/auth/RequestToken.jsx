@@ -1,10 +1,47 @@
-import React, {useEffect} from 'react';
+import React, {useRef} from 'react';
 import {Button, Label, TextInput} from 'flowbite-react';
+import {profileInsert} from "../../../../imports/modules/profile/profile.methods.js";
 
 export const RequestToken = ({onStateChange}) => {
+  profileInsert.call({_id: "Q3FusXa4iWb9SH7PQ"}, (error, response) => {
+    console.log(error);
+    console.log(response);
+  });
+
+  const emailRef = useRef();
 
   const handleAlreadyHaveToken = () => {
     onStateChange(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = {
+      email: emailRef.current.value,
+    };
+
+    console.log('Form data submitted:', formData);
+    console.log({
+      selector: {
+        email: formData.email
+      },
+      userData: {
+        email: formData.email
+      }
+    });
+    Accounts.requestLoginTokenForUser(
+      {
+        selector: {
+          email: formData.email
+        },
+        userData: {
+          email: formData.email
+        }
+      }, (error, response) => {
+        console.log(error);
+        console.log(response);
+      });
   };
 
   return (
@@ -13,12 +50,12 @@ export const RequestToken = ({onStateChange}) => {
 
       <div className="bg-white dark:bg-gray-900 py-8 px-4 mt-8 shadow sm:rounded-lg sm:px-10">
         <div>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="mb-2">
               <div className="mb-2 block">
                 <Label htmlFor="email" value="Email Address"/>
               </div>
-              <TextInput id="email" type="email" required/>
+              <TextInput id="email" type="email" ref={emailRef} required/>
             </div>
             <div>
               <Button type="submit" className="w-full flex justify-center py-1 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Request</Button>

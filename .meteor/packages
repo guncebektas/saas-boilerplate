@@ -27,7 +27,7 @@ logging
 zodern:types
 fetch@0.1.3
 email@2.2.5
-
+percolate:migrations
 reywood:publish-composite
 
 accounts-base

@@ -3,7 +3,10 @@
 
   },
   "private": {
-    "mailUrl": "smtp://gunce@ritapos.com:xer78pDeneme99*@smtp.yandex.com:587"
+    "mailUrl": "smtp://gunce@ritapos.com:xer78pDeneme99*@smtp.yandex.com:587",
+    "mailFromName": "Ritapos",
+    "mailFromEmail": "gunce@ritapos.com",
+    "mailSiteName": "ritapos.com"
   },
   "redisOplog": {
     "redis": {
