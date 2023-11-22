@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: [
-    "./imports/ui/**/*.{js,jsx,ts,tsx}",
+    "./client/ui/**/*.{js,jsx,ts,tsx}",
     "./client/*.html",
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],

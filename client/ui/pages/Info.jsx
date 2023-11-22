@@ -1,6 +1,6 @@
 import React from "react";
 import { useFind, useSubscribe } from "meteor/react-meteor-data";
-import { LinksCollection } from "../../api/links.js";
+import { Links } from "../../../imports/modules/links/database/links.js";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -21,7 +21,7 @@ export const Info = () => {
   ];
   const isLoading = useSubscribe("links");
 
-  const data = useFind(() => LinksCollection.find());
+  const data = useFind(() => Links.find());
 
   const links = data.map((d, index) => ({
     ...d,

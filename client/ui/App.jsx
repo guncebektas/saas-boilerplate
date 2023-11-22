@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react';
 import {BrowserRouter} from 'react-router-dom';
-import {Router} from '../routes/Router';
 import {Flowbite} from "flowbite-react";
-import {Header} from "./components/header/Header.jsx";
-import {Nav} from "./components/nav/Nav.jsx";
 import {ConditionalLayout} from "./layouts/ConditionalLayout.jsx";
+import * as fontawesome from "@fortawesome/fontawesome-svg-core";
+import {faCheck, faCodeMerge, faCoffee, faMeteor, faPenRuler} from "@fortawesome/free-solid-svg-icons";
+
+fontawesome.library.add(faCheck, faCoffee, faCodeMerge, faMeteor, faPenRuler);
 
 export function App() {
   useEffect(() => {
@@ -49,7 +50,7 @@ export function App() {
   return (
     <Flowbite>
       <BrowserRouter>
-        <div className="antialiased bg-gray-50 dark:bg-gray-900">
+        <div className="antialiased bg-indigo-50 dark:bg-gray-900">
           <div className="min-h-screen mx-auto">
             <ConditionalLayout/>
           </div>

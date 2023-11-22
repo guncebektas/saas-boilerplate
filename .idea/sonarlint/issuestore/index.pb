@@ -18,26 +18,14 @@ B
 .meteor/.id,b/2/b219a1a7937c93ae567972663be7a2fbb96f6a66
 =
 .meteorignore,9/9/99fb2f0a4b8bc1910dd52acd0bb68deb2de5b5e4
-D
-imports/api/links.js,b/5/b5709fa91d18c2d49eea8408ade9a3f2646ac862
-?
-client/main.css,c/e/cefb8c1815011ce8a95c13ef58de49b3ece26626
->
-server/main.js,0/0/00800a03b728d7902d9a7f62ec0052445d938600
 =
 tests/main.js,8/4/8458a099fb3fb852c85ae238fb8de8cc85d381ca
-@
-.meteor/packages,b/a/ba0a116b395d1f3a84d6c598ac49c9e2fe84ca42
 A
 .meteor/platforms,c/0/c08d6e52b061bcad1d57c58c3328e63d679f0e98
 A
 postcss.config.js,3/f/3f70684581fd16ab3be77ca959e0138ef3ee8bfb
 ?
 .meteor/release,9/5/95e2709c1d4d0cb33ec1b19c9c0264b41209d6ff
-=
-settings.json,c/b/cb7461413ce2481b9b3941ee38d326fc8f47620e
-@
-.meteor/versions,9/9/99c70d3d5bad6e7b9f09faa30977a3382222a573
 F
 .docker/app/Dockerfile,1/2/1211200a2cb3140b21940a719d9e37a8caf1255c
 E
@@ -48,5 +36,11 @@ J
 .docker/docker-compose.yml,f/d/fd1049fe87f70c154cda624a802550ea2247fbdc
 N
 .docker/docker-compose-dev.yml,8/1/8116d213f3c1c685dc4478cab505e6f75771d6f9
-?
-client/main.jsx,e/0/e04290decf07d0f0889755146472950dea3c3a7f
+V
+&imports/ui/components/ErrorFallback.js,0/5/05ab53629a6e736ab695c889088bd388a8cf6157
+P
+ imports/ui/components/Loading.js,5/c/5c60eecb1c458bd697c0fa35bec64ddbf4fef69a
+W
+'imports/ui/components/header/Header.jsx,b/e/be4c1d3fc6e611d891504e021fcb4e0bcdc78844
+I
+imports/ui/pages/Info.jsx,b/7/b736788e1607942894c38797c186ad0aa5d9eba3

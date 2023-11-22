@@ -1,9 +1,9 @@
 export const ROUTE = {
   DOCS: '/docs',
+  INFO: '/info',
   HOME: '/',
-  LOGIN: '/login',
   LOGOUT: '/logout',
+  PRICE: '/price',
   PROFILE: '/profile',
-  REGISTER: '/register',
   SETTINGS: '/settings'
 };

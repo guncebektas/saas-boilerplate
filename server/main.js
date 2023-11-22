@@ -1,13 +1,14 @@
+import './init.js';
 import { Meteor } from 'meteor/meteor';
-import { LinksCollection } from '/imports/api/links';
+import { Links } from '/imports/modules/links/database/links';
 
 async function insertLink({ title, url }) {
-  await LinksCollection.insertAsync({ title, url, createdAt: new Date() });
+  await Links.insertAsync({ title, url, createdAt: new Date() });
 }
 
 Meteor.startup(async () => {
   // If the Links collection is empty, add some data.
-  if (await LinksCollection.find().countAsync() === 0) {
+  if (await Links.find().countAsync() === 0) {
     await insertLink({
       title: 'Do the Tutorial',
       url: 'https://www.meteor.com/tutorials/react/creating-an-app',
@@ -32,6 +33,6 @@ Meteor.startup(async () => {
   // We publish the entire Links collection to all clients.
   // In order to be fetched in real-time to the clients
   Meteor.publish("links", function () {
-    return LinksCollection.find();
+    return Links.find();
   });
 });
