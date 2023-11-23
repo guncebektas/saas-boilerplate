@@ -54,20 +54,12 @@ P
  client/ui/components/nav/Nav.jsx,3/8/380029f2a7cd84c75b1076662a74c7876647e623
 U
 %imports/modules/links/server/index.js,8/9/8908337d6efc76c4e926a7907ee29c36892e0f5b
-B
-tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
 V
 &client/ui/layouts/LoggedUserLayout.jsx,b/5/b5e9669afb1fe84a9f32d6a527fdccbdc3a4fa6d
 U
 %client/ui/layouts/AnonymousLayout.jsx,3/d/3d8c776d052e5936d4764022f25d4742389a050a
 ]
--imports/modules/profile/server/rateLimiter.js,3/7/374b3092ef4dfed5bed44d99f700e65eaa94f633
-]
--imports/modules/profile/enums/publications.js,9/b/9b7eb693a4c73638f19f2a49e817a7a8edbecb79
-]
 -imports/modules/profile/enums/rateLimitter.js,6/0/6007a3199ec3e980fab84dfb45cf81f83edf9fd8
-Y
-)imports/modules/profile/profileService.js,1/e/1e425bfff448043890dbfa771ea22d95dd8187d2
 c
 3imports/modules/shared/repository/baseRepository.js,3/f/3fd847991e2d93b07ffb8c3627107c19de5012ea
 \
@@ -80,10 +72,6 @@ c
 settings.json,c/b/cb7461413ce2481b9b3941ee38d326fc8f47620e
 \
 ,imports/modules/profile/database/profiles.js,3/9/3929532ed26cb106a09594ed4810bacd51dbb521
-Z
-*imports/modules/profile/profile.methods.js,6/8/68aa1d0d822b6769e4b706a19ab412ccca797b83
-W
-'imports/modules/profile/server/index.js,5/2/52615d0d297bbbd3887ee76f43c8ddfc660c0823
 _
 /imports/modules/shared/enums/collectionNames.js,f/1/f13dbdc65f572d72b071b27802d76361899008f1
 W

@@ -21,8 +21,13 @@ export const Login = ({onStateChange}) => {
     };
 
     Meteor.loginWithPassword(formData.email, formData.password, (error, response) => {
-      console.log(error);
+      if (error) {
+        console.log(error);
+        return;
+      }
+
       console.log(response);
+      location.reload();
     });
   };
 

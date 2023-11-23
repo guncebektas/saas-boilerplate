@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import {Button, Label, TextInput} from 'flowbite-react';
 import {STATE_AUTH_PASSWORD_FORM} from "./enums/state.js";
 import {Accounts} from "meteor/accounts-base";
+import {profileInsert, profileUpdate} from "../../../../../imports/modules/profile/profile.methods.js";
 
 export const Register = ({onStateChange}) => {
   const emailRef = useRef();
@@ -23,8 +24,17 @@ export const Register = ({onStateChange}) => {
       email: formData.email,
       password: formData.password
     }, (error, response) => {
-      console.log(error);
+      if (error) {
+        console.log(error);
+        return;
+      }
+
       console.log(response);
+
+      profileInsert.callAsync({_id: response.id}, (error, response) => {
+        console.log(error);
+        console.log(response);
+      });
     });
   };
 

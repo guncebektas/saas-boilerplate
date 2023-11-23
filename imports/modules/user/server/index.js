@@ -1,2 +1,2 @@
-import './rateLimiter.js';
-import './users.guard.js';
+import './user.rateLimiter.js';
+import './user.guard.js';

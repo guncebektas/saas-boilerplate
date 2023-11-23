@@ -3,9 +3,9 @@ import {BrowserRouter} from 'react-router-dom';
 import {Flowbite} from "flowbite-react";
 import {ConditionalLayout} from "./layouts/ConditionalLayout.jsx";
 import * as fontawesome from "@fortawesome/fontawesome-svg-core";
-import {faCheck, faCodeMerge, faCoffee, faMeteor, faPenRuler} from "@fortawesome/free-solid-svg-icons";
+import {faCheck, faCodeMerge, faCoffee, faMeteor, faPenRuler, faUser} from "@fortawesome/free-solid-svg-icons";
 
-fontawesome.library.add(faCheck, faCoffee, faCodeMerge, faMeteor, faPenRuler);
+fontawesome.library.add(faCheck, faCoffee, faCodeMerge, faMeteor, faPenRuler, faUser);
 
 export function App() {
   return (

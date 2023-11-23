@@ -4,7 +4,7 @@ import {Nav} from "../components/nav/Nav.jsx";
 import {Router} from "../../routes/Router.js";
 import {Auth} from "../pages/auth/Auth.jsx";
 import {useTracker} from "meteor/react-meteor-data";
-const InnerLayout = ({children, onlyLogged, onlyAnonymous}) => {
+const InnerLayout = () => {
   const user = useTracker(() => { return Meteor.userId() });
 
   if (user) {

@@ -11,3 +11,14 @@ export const profileInsert = new ValidatedMethod({
     return profileService.add(_id);
   }
 });
+
+export const profileUpdate = new ValidatedMethod({
+  name: 'profile.update',
+  validate: new SimpleSchema({
+    name: {type: String},
+    surname: {type: String},
+  }).validator(),
+  async run({name, surname}) {
+    return profileService.edit(this.userId, name, surname);
+  }
+});
