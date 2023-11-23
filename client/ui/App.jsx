@@ -3,9 +3,21 @@ import {BrowserRouter} from 'react-router-dom';
 import {Flowbite} from "flowbite-react";
 import {ConditionalLayout} from "./layouts/ConditionalLayout.jsx";
 import * as fontawesome from "@fortawesome/fontawesome-svg-core";
-import {faCheck, faCodeMerge, faCoffee, faMeteor, faPenRuler, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faBell, faCheck, faClipboard, faCodeMerge, faCoffee, faDashboard, faFile, faMeteor, faPenRuler, faSuitcase, faUser} from "@fortawesome/free-solid-svg-icons";
 
-fontawesome.library.add(faCheck, faCoffee, faCodeMerge, faMeteor, faPenRuler, faUser);
+fontawesome.library.add(
+  faBell,
+  faCheck,
+  faClipboard,
+  faCoffee,
+  faCodeMerge,
+  faDashboard,
+  faFile,
+  faMeteor,
+  faPenRuler,
+  faSuitcase,
+  faUser
+);
 
 export function App() {
   return (
