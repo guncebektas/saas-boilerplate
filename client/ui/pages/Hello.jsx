@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Button} from "flowbite-react";
+import {H2} from "../components/heading/H2.jsx";
 
 export const Hello = () => {
   const [counter, setCounter] = useState(0);
@@ -14,7 +15,7 @@ export const Hello = () => {
         <div className="sm:flex sm:items-start sm:justify-between">
           <div>
             <div className="flex items-center">
-              <h2 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Welcome Meteor!</h2>
+              <H2 text="Welcome Meteor!"></H2>
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 400 400">
                   <g fill="#DE4F4F">

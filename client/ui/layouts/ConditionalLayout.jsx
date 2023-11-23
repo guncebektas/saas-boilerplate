@@ -2,12 +2,12 @@ import React from 'react';
 import {Header} from "../components/header/Header.jsx";
 import {Nav} from "../components/nav/Nav.jsx";
 import {Router} from "../../routes/Router.js";
-import {AuthToken} from "../pages/auth/AuthToken.jsx";
-
+import {Auth} from "../pages/auth/Auth.jsx";
+import {useTracker} from "meteor/react-meteor-data";
 const InnerLayout = ({children, onlyLogged, onlyAnonymous}) => {
-  const isLoggedIn = true;
+  const user = useTracker(() => { return Meteor.userId() });
 
-  if (isLoggedIn) {
+  if (user) {
     return (
       <section className="dark:bg-gray-800">
         <button data-drawer-target="drawer-navigation" data-drawer-toggle="drawer-navigation" aria-controls="drawer-navigation" type="button" className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
@@ -33,7 +33,7 @@ const InnerLayout = ({children, onlyLogged, onlyAnonymous}) => {
     <section className="dark:bg-gray-900">
       <main>
         <div className="mx-auto px-4 sm:px-6 lg:items-center lg:justify-between lg:py-24 lg:px-8">
-          <AuthToken/>
+          <Auth/>
         </div>
       </main>
     </section>

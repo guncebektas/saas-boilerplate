@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {RequestToken} from "./RequestToken.jsx";
 import {EnterToken} from "./EnterToken.jsx";
 

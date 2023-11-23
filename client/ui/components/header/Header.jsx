@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
-import {DarkThemeToggle} from "flowbite-react";
+import {Button, DarkThemeToggle} from "flowbite-react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Meteor} from "meteor/meteor";
 
 export const Header = () => {
 
@@ -42,6 +43,10 @@ export const Header = () => {
     observer.observe(htmlElement, {attributes: true, attributeFilter: ['class']});
 
   }, []);
+
+  const handleLogout = () => {
+    Meteor.logout();
+  };
 
   return (
     <nav className="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
@@ -523,29 +528,12 @@ export const Header = () => {
                   Billing
                 </div>
               </a>
-              <a
-                href="#"
+              <Button
                 className="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                onClick={handleLogout}
               >
-                <svg
-                  aria-hidden="true"
-                  className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-                  ></path>
-                </svg>
-                <div className="text-sm text-gray-900 dark:text-white">
-                  Logout
-                </div>
-              </a>
+                Logout
+              </Button>
             </div>
           </div>
           <button
@@ -632,10 +620,12 @@ export const Header = () => {
             >
               <li>
                 <a
-                  href="/logout"
-                  className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Logout</a
+                  href="#"
+                  className="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  onClick={handleLogout}
                 >
+                  Logout
+                </a>
               </li>
             </ul>
           </div>

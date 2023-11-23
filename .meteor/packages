@@ -31,8 +31,8 @@ percolate:migrations
 reywood:publish-composite
 
 accounts-base
+accounts-password
 accounts-passwordless
-# accounts-password
 alanning:roles
 
 mdg:validated-method

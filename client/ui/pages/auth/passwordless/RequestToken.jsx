@@ -1,12 +1,13 @@
 import React, {useRef} from 'react';
 import {Button, Label, TextInput} from 'flowbite-react';
-import {profileInsert} from "../../../../imports/modules/profile/profile.methods.js";
 
 export const RequestToken = ({onStateChange}) => {
+  /*
   profileInsert.call({_id: "Q3FusXa4iWb9SH7PQ"}, (error, response) => {
     console.log(error);
     console.log(response);
   });
+  */
 
   const emailRef = useRef();
 
@@ -21,15 +22,6 @@ export const RequestToken = ({onStateChange}) => {
       email: emailRef.current.value,
     };
 
-    console.log('Form data submitted:', formData);
-    console.log({
-      selector: {
-        email: formData.email
-      },
-      userData: {
-        email: formData.email
-      }
-    });
     Accounts.requestLoginTokenForUser(
       {
         selector: {
@@ -38,9 +30,6 @@ export const RequestToken = ({onStateChange}) => {
         userData: {
           email: formData.email
         }
-      }, (error, response) => {
-        console.log(error);
-        console.log(response);
       });
   };
 
