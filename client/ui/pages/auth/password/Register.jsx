@@ -60,10 +60,11 @@ export const Register = ({onStateChange}) => {
             <div>
               <Button type="submit" className="w-full flex justify-center py-1 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Register</Button>
             </div>
+
+            <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+              Already have an account? <button className="font-medium text-primary-600 hover:underline dark:text-primary-500" onClick={handleState}>Login here</button>
+            </p>
           </form>
-          <div className="mt-3 flex justify-end">
-            <Button className="text-blue" onClick={handleState}>Login</Button>
-          </div>
         </div>
       </div>
     </div>

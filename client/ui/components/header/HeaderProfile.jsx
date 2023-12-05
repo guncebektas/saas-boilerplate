@@ -9,8 +9,8 @@ import {profileRepository} from "../../../../imports/modules/profile/profileRepo
 export const HeaderProfile = () => {
   const [formData, setFormData] = useState({
     email: '',
-    name: '',
-    surname: '',
+    firstname: '',
+    lastname: '',
   });
 
   const user = useTracker(() => Meteor.user(), []);
@@ -22,8 +22,8 @@ export const HeaderProfile = () => {
 
       setFormData({
         email: user?.emails[0].address || '',
-        name: me.name || '',
-        surname: me.surname || '',
+        firstname: me.firstname || '',
+        lastname: me.lastname || '',
       });
     }
   }, [user]);
@@ -53,7 +53,7 @@ export const HeaderProfile = () => {
           <span
             className="block text-sm font-semibold text-gray-900 dark:text-white"
           >
-            {formData.name} {formData.surname}
+            {formData.firstname} {formData.lastname}
           </span>
           <span
             className="block text-sm text-gray-900 truncate dark:text-white"

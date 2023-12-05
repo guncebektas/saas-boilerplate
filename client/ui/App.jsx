@@ -3,20 +3,23 @@ import {BrowserRouter} from 'react-router-dom';
 import {Flowbite} from "flowbite-react";
 import {ConditionalLayout} from "./layouts/ConditionalLayout.jsx";
 import * as fontawesome from "@fortawesome/fontawesome-svg-core";
-import {faBell, faCheck, faClipboard, faCodeMerge, faCoffee, faDashboard, faFile, faMeteor, faPenRuler, faSuitcase, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faBell, faCheck, faClipboard, faClipboardList, faCodeMerge, faCoffee, faCog, faDashboard, faFile, faMeteor, faPenRuler, faSuitcase, faUser, faUserTie} from "@fortawesome/free-solid-svg-icons";
 
 fontawesome.library.add(
   faBell,
   faCheck,
   faClipboard,
-  faCoffee,
+  faClipboardList,
   faCodeMerge,
+  faCoffee,
+  faCog,
   faDashboard,
   faFile,
   faMeteor,
   faPenRuler,
   faSuitcase,
-  faUser
+  faUser,
+  faUserTie
 );
 
 export function App() {

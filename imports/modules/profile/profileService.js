@@ -12,12 +12,14 @@ class ProfileService extends BaseService {
     return profileRepository.insertAsync({_id});
   }
 
-  async edit(userId, name, surname) {
+  async edit(userId, firstname, lastname) {
     return profileRepository.updateAsync({
       _id: userId
     }, {
-      name,
-      surname
+      $set: {
+        firstname,
+        lastname
+      }
     });
   }
 }

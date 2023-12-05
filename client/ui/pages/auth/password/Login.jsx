@@ -38,31 +38,41 @@ export const Login = ({onStateChange}) => {
       <div className="bg-white dark:bg-gray-900 py-8 px-4 mt-8 shadow sm:rounded-lg sm:px-10">
         <div>
           <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="mb-2">
+            <div className="mb-1">
               <div className="mb-2 block">
                 <Label htmlFor="email" value="Email Address"/>
               </div>
               <TextInput id="email" type="email" ref={emailRef} required/>
             </div>
-            <div className="mb-2">
+            <div className="mb-1">
               <div className="mb-2 block">
                 <Label htmlFor="password" value="Password"/>
               </div>
               <TextInput id="password" type="password" ref={passwordRef} required/>
             </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-start">
+                <div className="flex items-center h-5">
+                  <input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"/>
+                </div>
+                <div className="ml-3 text-sm">
+                  <label htmlFor="remember" className="text-gray-500 dark:text-gray-300">Remember me</label>
+                </div>
+              </div>
+              <button type="button" className="font-medium text-gray-500 dark:text-gray-400 hover:underline" onClick={() => handleState(STATE_AUTH_PASSWORD_FORM.FORGOTTEN_PASSWORD)}>Forgotten password?</button>
+            </div>
             <div>
               <Button type="submit" className="w-full flex justify-center py-1 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Login</Button>
             </div>
+
+            <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+              Don’t have an account yet?
+              <button className="font-medium hover:underline mx-1" onClick={() => handleState(STATE_AUTH_PASSWORD_FORM.REGISTER)}>Register</button>
+            </p>
           </form>
-          <div className="mt-3 flex">
-            <div className="justify-start">
-              <Button className="text-blue" onClick={() => handleState(STATE_AUTH_PASSWORD_FORM.FORGOTTEN_PASSWORD)}>Forgotten password?</Button>
-            </div>
-            <div className="justify-end">
-              <Button className="text-blue" onClick={() => handleState(STATE_AUTH_PASSWORD_FORM.REGISTER)}>Register</Button>
-            </div>
-          </div>
         </div>
       </div>
-    </div>);
+    </div>
+);
 };

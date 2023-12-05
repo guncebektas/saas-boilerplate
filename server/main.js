@@ -3,7 +3,7 @@ import './modules.js';
 
 // TODO: remove
 import {Meteor} from 'meteor/meteor';
-import {Links} from '/imports/modules/links/database/links';
+import {Links} from '/imports/modules/link/database/links';
 async function insertLink({title, url}) {
   await Links.insertAsync({title, url, createdAt: new Date()});
 }

@@ -5,5 +5,6 @@ export const ROUTE = {
   LOGOUT: '/logout',
   PRICE: '/price',
   PROFILE: '/profile',
-  SETTINGS: '/settings'
+  SETTINGS: '/settings',
+  TICKET: '/ticket'
 };

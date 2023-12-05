@@ -16,6 +16,13 @@ export const ForgottenPassword = ({onStateChange}) => {
     const formData = {
       email: emailRef.current.value,
     };
+
+    Accounts.forgotPassword({
+      email: formData.email
+    }, (error, response) => {
+      console.log(error);
+      console.log(response);
+    });
   };
 
   return (
@@ -34,10 +41,12 @@ export const ForgottenPassword = ({onStateChange}) => {
             <div>
               <Button type="submit" className="w-full flex justify-center py-1 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Send</Button>
             </div>
+
+            <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+              Don’t have an account yet?
+              <button className="font-medium hover:underline mx-1" onClick={() => handleState(STATE_AUTH_PASSWORD_FORM.LOGIN)}>Register</button>
+            </p>
           </form>
-          <div className="mt-3 flex justify-end">
-            <Button className="text-blue" onClick={handleState}>Login</Button>
-          </div>
         </div>
       </div>
     </div>

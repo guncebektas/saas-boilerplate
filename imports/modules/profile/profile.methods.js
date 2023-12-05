@@ -1,12 +1,10 @@
-import {ValidatedMethod} from "meteor/mdg:validated-method";
-import SimpleSchema from "simpl-schema";
 import {profileService} from "./profileService.js";
+import {ValidatedMethod} from "meteor/mdg:validated-method";
+import {schema} from "../shared/schema.js";
 
 export const profileInsert = new ValidatedMethod({
   name: 'profile.insert',
-  validate: new SimpleSchema({
-    _id: {type: String},
-  }).validator(),
+  validate: null,
   async run({_id}) {
     return profileService.add(_id);
   }
@@ -14,11 +12,16 @@ export const profileInsert = new ValidatedMethod({
 
 export const profileUpdate = new ValidatedMethod({
   name: 'profile.update',
-  validate: new SimpleSchema({
-    name: {type: String},
-    surname: {type: String},
-  }).validator(),
-  async run({name, surname}) {
-    return profileService.edit(this.userId, name, surname);
+  validate: schema.compile({
+    type: 'object',
+    properties: {
+      firstname: { type: 'string' },
+      lastname: { type: 'string' },
+    },
+    required: ['firstname', 'lastname'],
+    additionalProperties: false,
+  }),
+  async run({firstname, lastname}) {
+    return profileService.edit(this.userId, firstname, lastname);
   }
 });

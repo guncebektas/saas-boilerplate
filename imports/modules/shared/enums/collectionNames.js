@@ -1,4 +1,5 @@
 export const COLLECTION_NAME = {
   LINKS: 'links',
-  PROFILES: 'profiles'
+  PROFILES: 'profiles',
+  TICKETS: 'tickets'
 };

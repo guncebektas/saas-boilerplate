@@ -1,6 +1,6 @@
 import React from "react";
 import { useFind, useSubscribe } from "meteor/react-meteor-data";
-import { Links } from "../../../imports/modules/links/database/links.js";
+import { Links } from "../../../imports/modules/link/database/links.js";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");

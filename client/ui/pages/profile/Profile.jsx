@@ -10,8 +10,8 @@ import {profileUpdate} from "../../../../imports/modules/profile/profile.methods
 export const Profile = () => {
   const [formData, setFormData] = useState({
     email: '',
-    name: '',
-    surname: '',
+    firstname: '',
+    lastname: '',
   });
 
   const user = useTracker(() => Meteor.user(), []);
@@ -23,8 +23,8 @@ export const Profile = () => {
 
       setFormData({
         email: user?.emails[0].address || '',
-        name: me.name || '',
-        surname: me.surname || '',
+        firstname: me.firstname || '',
+        lastname: me.lastname || '',
       });
     }
   }, [user]);
@@ -39,7 +39,7 @@ export const Profile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    profileUpdate.call({name: formData.name, surname: formData.surname}, (error, response) => {
+    profileUpdate.call({firstname: formData.firstname, lastname: formData.lastname}, (error, response) => {
       console.log(error);
       console.log(response);
     });
@@ -58,15 +58,15 @@ export const Profile = () => {
           </div>
           <div className="mb-2">
             <div className="mb-2 block">
-              <Label htmlFor="name" value="Name"/>
+              <Label htmlFor="firstname" value="Firstname"/>
             </div>
-            <TextInput id="name" type="text" value={formData.name} onChange={handleInputChange}/>
+            <TextInput id="firstname" type="text" value={formData.firstname} onChange={handleInputChange}/>
           </div>
           <div className="mb-2">
             <div className="mb-2 block">
-              <Label htmlFor="surname" value="Surname"/>
+              <Label htmlFor="lastname" value="Lastname"/>
             </div>
-            <TextInput id="surname" type="text" value={formData.surname} onChange={handleInputChange}/>
+            <TextInput id="lastname" type="text" value={formData.lastname} onChange={handleInputChange}/>
           </div>
           <div>
             <Button type="submit" className="w-full flex justify-center py-1 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Save</Button>
