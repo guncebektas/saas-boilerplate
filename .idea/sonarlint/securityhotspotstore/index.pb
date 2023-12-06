@@ -108,8 +108,6 @@ O
 ,imports/modules/profile/enums/publication.js,a/d/ad618b20432f3bbe8ef22448e94e318aeeba650d
 @
 .meteor/packages,b/a/ba0a116b395d1f3a84d6c598ac49c9e2fe84ca42
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 W
 'imports/modules/profile/server/index.js,5/2/52615d0d297bbbd3887ee76f43c8ddfc660c0823
 f
