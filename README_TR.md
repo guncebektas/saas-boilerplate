@@ -2,33 +2,32 @@
   SaaS Boilerplate Kurulum ve Kullanımı
 </h1>
 
-### Introduction
-We are using Meteor.js, MongoDB, Redis, React, Tailwind and FlowBite UI.
-There are small differences on our approach to Meteor.js. However, learning Meteor.js from its own guide will be
-enough to contribute.
+### Giriş
+Meteor.js, MongoDB, Redis, React, Tailwind and FlowBite UI kullanıyoruz.
+Meteor.js 'e yaklaşımımızda bazı küçük farklılıklar var. Ancak Meteor.js'i kendi dökümantasyonundan öğrenmek katkıda bulunmaya mani değildir.
 
-### Requirements
-- Install NVM
-- Install Node.js
-- Install [Meteor.js](https://www.meteor.com/developers/install)
-- Make sure you have [Docker](https://docs.docker.com/install) and [Docker Compose](https://docs.docker.com/compose/install/) installed and operational.
+### Gereklilikler
+- NVM'i kurun.
+- Node.js'i kurun ( versiyon 14.x'den yüksek versiyonlar desteklenmemektedir.).
+- [Meteor.js](https://www.meteor.com/developers/install)'i kurun.
+- [Docker](https://docs.docker.com/install) ve [Docker Compose](https://docs.docker.com/compose/install/) kurulmuş ve çalışır olması gerekir.
 
-### Dev environment
-Run mongodb (replica set) and redis for development environment
+### Geliştirici ortamı
+Geliştirici ortamı için Mongodb (replica set) ve redis.
 
 ```bash 
 npm run dev-env
 ```
-
-When docker images are up, run the app
+Docker imajı ayağa kalkınca uygulamayı çalıştır.
+(Docker engine çalışıyor olmalı.)
 
 ```bash 
 npm run start
 ```
+Redis-oplog devredışı bırakıldıktan sonra mongodbnin gömülü komutu olan `meteor` komutu uygulamayı çalıştırmak için kullanılabilir.
 
-You can use `meteor` command to run the application with its build in mongodb, after disabling redis-oplog
 
-To simulate production use
+Canlı ortamı simule etmek için
 
 ```bash 
 npm run simulate-production
@@ -43,8 +42,8 @@ npm run test
 npm run cypress
 ```
 
-### Deploy
-We are using mup to deploy, so check .deploy folder for details
+### Canlıya alma
+Canlıya almak için "mup" kullanıyoruz bu nedenle .deploy dosyasını kontrol edin.
 
 ```bash 
 npm run deploy
