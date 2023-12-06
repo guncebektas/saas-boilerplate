@@ -14,14 +14,14 @@
     "cypress": "cypress run",
     "cypress-run": "cypress run",
     "cypress-open": "cypress open",
-    "docker": "mkdir -p ../saas-volume/db && cdocker compose -f .docker/docker-compose.yml up -d",
-    "dev-env": "mkdir -p ../saas-volume/db && cdocker compose -f .docker/docker-compose-dev.yml up -d",
+    "docker": "mkdir -p ../saas-volume/db && docker compose -f .docker/docker-compose.yml up -d",
+    "dev-env": "mkdir -p ../saas-volume/db && docker compose -f .docker/docker-compose-dev.yml up -d",
     "lint": "eslint .",
     "pretest": "npm run lint --silent",
     "deploy": "cd .deploy && mup deploy"
   },
   "dependencies": {
-    "@babel/runtime": "^7.15.4",
+    "@babel/runtime": "^7.23.5",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
