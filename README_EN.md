@@ -1,17 +1,6 @@
 <h1 align="center">
-  <a href="https://meteor.com">
-    <img alt="Meteor.js" src="https://dmtgy0px4zdqn.cloudfront.net/images/meteor-logo.webp" width="200" />
-  </a>
-  <br>
-  SaaS Boilerplate
+  SaaS Boilerplate Setup and Guide
 </h1>
-
-<p align="center">
-Production ready boilerplate for your new SaaS App.</p>
-
-<h4 align="center">
-  <a href="https://github.com">Documentation</a>
-</h4>
 
 ### Introduction
 We are using Meteor.js, MongoDB, Redis, React, Tailwind and FlowBite UI.
