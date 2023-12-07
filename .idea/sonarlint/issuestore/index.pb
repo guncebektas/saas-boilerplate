@@ -11,9 +11,6 @@ K
 .meteor/.finished-upgraders,d/1/d18e982bcdc314a4fef85a5bdab794e52beeebf4
 B
 .meteor/.gitignore,1/a/1af16bb32708f9cb9d1f18279072fba896e2c0de
-:
-
-.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 ;
 .meteor/.id,b/2/b219a1a7937c93ae567972663be7a2fbb96f6a66
 =
