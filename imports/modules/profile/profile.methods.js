@@ -1,26 +1,18 @@
+import {createMethod} from 'meteor/jam:method'; // can import { Methods } from 'meteor/jam:method' instead and use Methods.create if you prefer
+import {z} from "zod";
 import {profileService} from "./profileService.js";
-import {ValidatedMethod} from "meteor/mdg:validated-method";
-import {schema} from "../shared/schema.js";
 
-export const profileInsert = new ValidatedMethod({
+export const profileInsert = createMethod({
   name: 'profile.insert',
-  validate: null,
+  schema: z.object({_id: z.string()}),
   async run({_id}) {
     return profileService.add(_id);
   }
 });
 
-export const profileUpdate = new ValidatedMethod({
+export const profileUpdate = createMethod({
   name: 'profile.update',
-  validate: schema.compile({
-    type: 'object',
-    properties: {
-      firstname: { type: 'string' },
-      lastname: { type: 'string' },
-    },
-    required: ['firstname', 'lastname'],
-    additionalProperties: false,
-  }),
+  schema: z.object({firstname: z.string(), lastname: z.string()}),
   async run({firstname, lastname}) {
     return profileService.edit(this.userId, firstname, lastname);
   }

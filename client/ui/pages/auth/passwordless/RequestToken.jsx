@@ -3,7 +3,7 @@ import {Button, Label, TextInput} from 'flowbite-react';
 
 export const RequestToken = ({onStateChange}) => {
   /*
-  profileInsert.call({_id: "Q3FusXa4iWb9SH7PQ"}, (error, response) => {
+  profileInsert({_id: "Q3FusXa4iWb9SH7PQ"}, (error, response) => {
     console.log(error);
     console.log(response);
   });

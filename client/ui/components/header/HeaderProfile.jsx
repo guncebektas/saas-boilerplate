@@ -5,6 +5,7 @@ import {useTracker} from "meteor/react-meteor-data";
 import {Link} from "react-router-dom";
 import {PROFILE_PUBLICATION} from "../../../../imports/modules/profile/enums/publication.js";
 import {profileRepository} from "../../../../imports/modules/profile/profileRepository.js";
+import {ROUTE} from "../../../routes/enums/route.js";
 
 export const HeaderProfile = () => {
   const [formData, setFormData] = useState({
@@ -67,7 +68,7 @@ export const HeaderProfile = () => {
         >
           <li>
             <Link
-              to="/profile"
+              to={ROUTE.PROFILE}
               className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
               My profile
             </Link>

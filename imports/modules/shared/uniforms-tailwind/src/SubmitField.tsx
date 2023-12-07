@@ -4,7 +4,7 @@ import React, {HTMLProps, Ref} from 'react';
 import {filterDOMProps, Override, useForm} from 'uniforms';
 
 import gridClassName from './gridClassName';
-import {baseInputClasses} from "./baseFormClasses";
+import {baseButtonClasses} from "./baseFormClasses";
 
 export type SubmitFieldProps = Override<
   HTMLProps<HTMLInputElement>,
@@ -36,7 +36,6 @@ function SubmitField({
         'appearance-none',
         'block',
         'w-full',
-        ...baseInputClasses,
         {
           'is-invalid': error,
           'cursor-not-allowed': disabled || readOnly || !!error || state.disabled,
@@ -85,6 +84,6 @@ function SubmitField({
   );
 }
 
-SubmitField.defaultProps = {inputClassName: 'bg-blue-500 text-white py-2 px-4 rounded-lg cursor-pointer'};
+SubmitField.defaultProps = {inputClassName: baseButtonClasses};
 
 export default SubmitField;

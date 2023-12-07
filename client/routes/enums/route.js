@@ -1,4 +1,5 @@
 export const ROUTE = {
+  ADMIN: '/admin',
   DOCS: '/docs',
   INFO: '/info',
   HOME: '/',
@@ -6,5 +7,6 @@ export const ROUTE = {
   PRICE: '/price',
   PROFILE: '/profile',
   SETTINGS: '/settings',
-  TICKET: '/ticket'
+  TICKETS: '/ticket/list',
+  TICKET: '/ticket/form'
 };

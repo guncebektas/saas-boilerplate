@@ -35,6 +35,7 @@ accounts-password
 accounts-passwordless
 alanning:roles
 
+jam:method
 mdg:validated-method
 ddp-rate-limiter@1.2.0
 

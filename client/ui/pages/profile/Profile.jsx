@@ -39,7 +39,7 @@ export const Profile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    profileUpdate.call({firstname: formData.firstname, lastname: formData.lastname}, (error, response) => {
+    profileUpdate({firstname: formData.firstname, lastname: formData.lastname}, (error, response) => {
       console.log(error);
       console.log(response);
     });
