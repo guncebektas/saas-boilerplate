@@ -6,11 +6,17 @@ import {TICKET_PUBLICATION} from "../../../../imports/modules/tickets/enums/publ
 import {Link} from "react-router-dom";
 import {ROUTE} from "../../../routes/enums/route.js";
 import {Button} from "flowbite-react";
+import {setParam} from "../../../shared/helpers/setParam.js";
 
 export const Tickets = () => {
   const tickets = useTracker(() => {
-    const handle = Meteor.subscribe(TICKET_PUBLICATION.ALL); // TODO: limit this
-    return handle.ready() ? ticketRepository.find().fetch() : [];
+    const handle = Meteor.subscribe(TICKET_PUBLICATION.ALL);
+
+    if (!handle.ready()) {
+      return [];
+    }
+
+    return ticketRepository.find().fetch();
   });
 
   return (
@@ -24,13 +30,19 @@ export const Tickets = () => {
             <div className="mt-2 max-w-xl text-gray-500 text-lg">
               <ul>
                 {tickets.map((item) => (
-                  <li key={item._id}>{item.name}</li>
+                  <li key={item._id}>
+                    {item.message}
+
+                    <Link to={setParam(ROUTE.TICKET, {key: '_id', value: item._id})}>
+                      Edit
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </div>
           </div>
           <div className="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
-            <Link to={ROUTE.TICKET}>
+            <Link to={setParam(ROUTE.TICKET, {key: '_id', value: 'new'})}>
               <Button
                 color="blue"
               >

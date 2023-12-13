@@ -8,5 +8,5 @@ export const ROUTE = {
   PROFILE: '/profile',
   SETTINGS: '/settings',
   TICKETS: '/ticket/list',
-  TICKET: '/ticket/form'
+  TICKET: '/ticket/form/:_id',
 };
