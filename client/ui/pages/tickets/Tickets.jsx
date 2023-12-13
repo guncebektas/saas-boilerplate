@@ -5,8 +5,9 @@ import {ticketRepository} from "../../../../imports/modules/tickets/ticketReposi
 import {TICKET_PUBLICATION} from "../../../../imports/modules/tickets/enums/publication.js";
 import {Link} from "react-router-dom";
 import {ROUTE} from "../../../routes/enums/route.js";
-import {Button} from "flowbite-react";
+import {Button, Table} from "flowbite-react";
 import {setParam} from "../../../shared/helpers/setParam.js";
+import {ticketRemove} from "../../../../imports/modules/tickets/ticket.methods.js";
 
 export const Tickets = () => {
   const tickets = useTracker(() => {
@@ -19,6 +20,10 @@ export const Tickets = () => {
     return ticketRepository.find().fetch();
   });
 
+  const handleRemove = (_id) => {
+    ticketRemove({_id});
+  };
+
   return (
     <>
       <div className="px-4 py-5 sm:p-6">
@@ -26,30 +31,33 @@ export const Tickets = () => {
           <div>
             <div className="flex items-center">
               <H2 text="Ticket"></H2>
-            </div>
-            <div className="mt-2 max-w-xl text-gray-500 text-lg">
-              <ul>
-                {tickets.map((item) => (
-                  <li key={item._id}>
-                    {item.message}
 
-                    <Link to={setParam(ROUTE.TICKET, {key: '_id', value: item._id})}>
-                      Edit
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                <Link to={setParam(ROUTE.TICKET, {key: '_id', value: 'new'})}>
+                  <Button gradientMonochrome="purple">New</Button>
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
-            <Link to={setParam(ROUTE.TICKET, {key: '_id', value: 'new'})}>
-              <Button
-                color="blue"
-              >
-                New
-              </Button>
-            </Link>
-          </div>
+        </div>
+        <div className="mt-2 w-full text-gray-500 text-lg">
+          <Table striped hoverable className="w-full">
+            <Table.Body>
+              {tickets.map((item) => (
+                <Table.Row key={item._id}>
+                  <Table.Cell>{item.message}</Table.Cell>
+                  <Table.Cell>
+                    <div className="flex flex-wrap gap-2">
+                      <Link to={setParam(ROUTE.TICKET, {key: '_id', value: item._id})}>
+                        <Button color="blue">Edit</Button>
+                      </Link>
+                      <Button color="failure" onClick={() => handleRemove(item._id)}>Delete</Button>
+                    </div>
+                  </Table.Cell>
+                </Table.Row>
+              ))}
+            </Table.Body>
+          </Table>
         </div>
       </div>
     </>
