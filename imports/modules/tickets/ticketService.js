@@ -13,6 +13,14 @@ class TicketService extends BaseService {
       $set: object
     });
   }
+
+  /**
+   * @param _id {string}
+   * @return {Promise<number>}
+   */
+  async remove(_id) {
+    return ticketRepository.removeAsync(_id);
+  }
 }
 
 export const ticketService = new TicketService();

@@ -1,8 +1,9 @@
 import {RATE_LIMITER} from '../enums/rateLimitter.js';
-import {ticketUpsert} from "../ticket.methods.js";
+import {ticketUpsert, ticketRemove} from "../ticket.methods.js";
 
 const LISTS_METHODS = [
-  ticketUpsert
+  ticketUpsert,
+  ticketRemove
 ].map(method => method.name);
 
 DDPRateLimiter.addRule({
