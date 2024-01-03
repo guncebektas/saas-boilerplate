@@ -989,16 +989,12 @@ Q.idea/sonarlint/securityhotspotstore/0/e/0eab2e1ca16b7c7fd9e154209ffb3b9e9bb6d1
 README_EN.md,5/4/54944635221751e8f700aac3c3dc4a89d263a10b
 <
 README_TR.md,e/4/e47e379dcff1870b2342c19dd64a2c4f34305595
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 T
 $client/ui/components/nav/NavItem.jsx,7/a/7acd12da69e9e7477bba73cec9a170ce62ca7507
 V
 &client/ui/components/header/Header.jsx,c/f/cfd149619247b151efca9eb14f878e0e3aacde3c
 A
 server/modules.js,5/c/5cc8801d786c8fb9dcdd5f734ed27ade11aa4117
-[
-+imports/modules/tickets/database/tickets.js,0/a/0a3fb3760bf5f22df242b61528dcd9858ff9349e
 c
 3imports/modules/shared/repository/baseRepository.js,3/f/3fd847991e2d93b07ffb8c3627107c19de5012ea
 I
@@ -1048,3 +1044,15 @@ $packages/method-main/test-methods.js,0/7/07ad90cacee1359f2584036550b249e0c798f
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+\
+,imports/modules/tickets/enums/publication.js,0/b/0b88d23ff6dfdce8b49fc78ac41cb5f13efc1403
+e
+5imports/modules/tickets/server/ticket.publications.js,e/c/ecf8f8c9d92bca5e02a49b006f984127bcff0aba
+G
+client/routes/Router.js,2/d/2d77e86dd5cb52838caf96c03371292d97cfcfed
+L
+client/routes/enums/route.js,0/1/01447a45887409dcddcb6f1ab8730efe5feb010d
+O
+client/shared/enums/formType.js,f/4/f471171d7150a9152498859b77d1b9addbbea476
+Q
+!client/shared/helpers/setParam.js,e/2/e2d47cbbb402b743583754dd33d550dc9a1dd068
