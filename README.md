@@ -19,5 +19,5 @@ There are small differences on our approach to Meteor.js. However, learning Mete
 enough to contribute.
 
 ### Start
-- [English](https://github.com/guncebektas/saas-boilerplate/README_EN.md)
-- [Turkish](https://github.com/guncebektas/saas-boilerplate/README_TR.md)
+- [English](https://github.com/guncebektas/saas-boilerplate/blob/main/README_EN.md)
+- [Turkish](https://github.com/guncebektas/saas-boilerplate/blob/main/README_TR.md)
