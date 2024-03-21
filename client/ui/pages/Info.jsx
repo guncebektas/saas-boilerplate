@@ -1,6 +1,7 @@
 import React from "react";
-import { useFind, useSubscribe } from "meteor/react-meteor-data";
-import { Links } from "../../../imports/modules/link/database/links.js";
+import {useFind, useSubscribe} from "meteor/react-meteor-data";
+import {PUBLISH} from "../../../imports/modules/link/enums/publish";
+import {linkRepository} from "../../../imports/modules/link/linkRepository";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -19,9 +20,9 @@ export const Info = () => {
     "bg-rose-50",
     "bg-yellow-50",
   ];
-  const isLoading = useSubscribe("links");
+  const isLoading = useSubscribe(PUBLISH.LINKS);
 
-  const data = useFind(() => Links.find());
+  const data = useFind(() => linkRepository.find());
 
   const links = data.map((d, index) => ({
     ...d,

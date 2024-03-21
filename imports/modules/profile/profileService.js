@@ -1,5 +1,3 @@
-import {BaseRepository} from "../shared/repository/baseRepository.js";
-import {Profiles} from "./database/profiles.js";
 import {BaseService} from "../shared/service/baseService.js";
 import {profileRepository} from "./profileRepository.js";
 

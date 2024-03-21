@@ -4,7 +4,7 @@ import {Log} from "meteor/logging";
 /**
  * Base class containing repository functionality
  */
-class BaseRepository {
+export class BaseRepository {
   /**
    * @constructor
    * @param collection {Mongo.Collection}
@@ -55,7 +55,7 @@ class BaseRepository {
    * @async
    * @param selector {string|object} [optional]
    * @param options {object} [optional]
-   * @returns {Mongo.Cursor}
+   * @return {Promise<*>}
    */
   async findOneAsync(selector = {}, options = {}) {
     return this._collection.findOneAsync(selector, options);
@@ -361,5 +361,3 @@ class BaseRepository {
     return Random.id();
   }
 }
-
-export {BaseRepository};
