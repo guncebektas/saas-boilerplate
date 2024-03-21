@@ -1056,3 +1056,21 @@ L
 client/routes/enums/route.js,0/1/01447a45887409dcddcb6f1ab8730efe5feb010d
 O
 client/shared/enums/formType.js,f/4/f471171d7150a9152498859b77d1b9addbbea476
+d
+4imports/modules/tickets/server/ticket.rateLimiter.js,5/0/5028160d88aa73339ce0c2a2aa43698aa4b48d84
+S
+#client/ui/pages/tickets/Tickets.jsx,e/c/ecd7e90ee3ec2d9e036aaad087aba095b1f00199
+R
+"client/ui/pages/tickets/Ticket.jsx,6/5/65f2355268cb7176b2da3b9a42181acaf331cd72
+X
+(imports/modules/tickets/ticketService.js,4/f/4f1388cef55a59f59be2546f41fa1fb022789201
+Y
+)imports/modules/tickets/ticket.methods.js,d/4/d404c2c1b86b39f40f62f955c1bd0efc2d21c08f
+[
++imports/modules/tickets/database/tickets.js,0/a/0a3fb3760bf5f22df242b61528dcd9858ff9349e
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+_
+/imports/modules/tickets/schemas/ticketSchema.js,6/c/6ca4532074603e164b8e87004bcd0116737ef9fb
+_
+/imports/modules/tickets/server/ticket.guards.js,8/6/86cc30e4df3fe438839ab7ca3eaaae2178471a66
