@@ -1090,3 +1090,7 @@ U
 %imports/modules/dummy/server/index.js,b/1/b1a4ec83824aeee7f2c1e58c5e54b2f5e339f628
 T
 $imports/modules/dummy/enums/links.js,f/9/f9090a72fbe7183eaf83e27dcfce0573b6c68bfc
+O
+client/ui/pages/admin/Admin.jsx,b/5/b53f686861ec822840c5c06d5911281bb52bc7e6
+U
+%client/ui/pages/settings/Settings.jsx,e/f/efb92953b659720415a3dc21c6b33d55c1ff4d58
