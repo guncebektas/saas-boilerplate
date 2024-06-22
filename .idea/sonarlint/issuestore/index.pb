@@ -1094,3 +1094,23 @@ M
 client/ui/pages/docs/Docs.jsx,1/d/1d6a0fb3d94a23b495a6c798ece051a5fcaf6bed
 T
 $client/ui/components/alert/Alert.jsx,b/c/bc6f4e0556c1042ed6946febfcead3a8f2c796a1
+k
+;packages/meteor-method-feature-meteor-3-0-compat/package.js,b/f/bf548639b5de9010a4e9063c3dce8c2841ee912d
+l
+<packages/meteor-method-feature-meteor-3-0-compat/method.d.ts,5/6/56796bfc595a6876f4f7e98f3629f1bce49649d9
+j
+:packages/meteor-method-feature-meteor-3-0-compat/README.md,3/e/3e2d4dd750083553871ef4609970433cce7e9abb
+j
+:packages/meteor-method-feature-meteor-3-0-compat/method.js,d/8/d8e98237dc7ec55185e431b59bafe18c008efee0
+m
+=packages/meteor-method-feature-meteor-3-0-compat/CHANGELOG.md,d/4/d41f329b66a58ad821cecf82b91fc8c68637eb99
+i
+9packages/meteor-method-feature-meteor-3-0-compat/tests.js,f/6/f67e90173eaf5aaf028cf6a2ebd9e134af4e5e26
+s
+Cpackages/meteor-method-feature-meteor-3-0-compat/package-types.json,d/0/d05a618e714f05c290dbb7ea207d1e04fffcfece
+p
+@packages/meteor-method-feature-meteor-3-0-compat/test-methods.js,e/b/eb94ce3ea471662403a84a3706aa75946b578337
+i
+9packages/meteor-method-feature-meteor-3-0-compat/utils.js,7/8/780563d6d2dcc0495ba58260554403d9eb0c140c
+k
+;packages/meteor-method-feature-meteor-3-0-compat/.gitignore,9/5/9552b48e56b4bde49ec84c2956b8d78a4d03fe5e
