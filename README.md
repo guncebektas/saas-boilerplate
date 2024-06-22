@@ -14,7 +14,7 @@ Production ready boilerplate for your new SaaS App.</p>
 </h4>
 
 ### Introduction
-We are using Meteor.js, MongoDB, Redis, React, Tailwind and FlowBite UI.
+We are using Meteor.js, MongoDB, Redis (not ready for Meteor.js v3), React, Tailwind and FlowBite UI.
 There are small differences on our approach to Meteor.js. However, learning Meteor.js from its own guide will be
 enough to contribute.
 
