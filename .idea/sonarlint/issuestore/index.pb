@@ -251,8 +251,6 @@ Q.idea/sonarlint/securityhotspotstore/e/0/e04290decf07d0f0889755146472950dea3c3a
 Q.idea/sonarlint/securityhotspotstore/3/f/3fd847991e2d93b07ffb8c3627107c19de5012ea,9/b/9b007469f6c85b9ee128ff6866e2e207d73aa121
 A
 client/ui/App.jsx,8/2/82c1e59c31dffa9d211134eda5d8b9da6c55fe1b
-H
-client/ui/pages/Info.jsx,c/d/cdcdeaac7f60d02417286952e6c94906d0042cef
 c
 3client/ui/pages/auth/password/ForgottenPassword.jsx,a/a/aae6376f4889b4c3acca142a6bc1ae13599cd068
 W
@@ -878,8 +876,6 @@ G.idea/sonarlint/issuestore/a/6/a68fff32901a126343eb8b7b431d06844fbb83d7,2/e/2e
 w
 G.idea/sonarlint/issuestore/c/d/cde930f567d0cdec41341ac3460e175f14e4a558,8/2/82b8d5c12b288608ba9fcc35976142e0c3b0b549
 w
-G.idea/sonarlint/issuestore/c/d/cdcdeaac7f60d02417286952e6c94906d0042cef,9/2/92cdd217588a28471635feabbc1d2d12af017cb9
-w
 G.idea/sonarlint/issuestore/c/0/c03def64c525af26437b6b491fbf8e7621866e7d,2/4/2442928fbbef4442a9155f8974812f54afbd71f0
 w
 G.idea/sonarlint/issuestore/8/1/818c9fc117876d69d8078f320e5202fcb4c8fc9d,f/9/f9e04fb0ce02970554fe9f34d37232b2a9760129
@@ -1094,3 +1090,7 @@ O
 client/ui/pages/admin/Admin.jsx,b/5/b53f686861ec822840c5c06d5911281bb52bc7e6
 U
 %client/ui/pages/settings/Settings.jsx,e/f/efb92953b659720415a3dc21c6b33d55c1ff4d58
+M
+client/ui/pages/docs/Docs.jsx,1/d/1d6a0fb3d94a23b495a6c798ece051a5fcaf6bed
+T
+$client/ui/components/alert/Alert.jsx,b/c/bc6f4e0556c1042ed6946febfcead3a8f2c796a1

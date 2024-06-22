@@ -6,6 +6,7 @@ import {Meteor} from "meteor/meteor";
 import {PROFILE_PUBLICATION} from "../../../../imports/modules/profile/enums/publication.js";
 import {profileRepository} from "../../../../imports/modules/profile/profileRepository.js";
 import {profileUpdate} from "../../../../imports/modules/profile/profile.methods.js";
+import {ToastSuccess, ToastWarning} from "../../components/alert/Alert";
 
 export const Profile = () => {
   const [formData, setFormData] = useState({
@@ -36,13 +37,16 @@ export const Profile = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    profileUpdate({firstname: formData.firstname, lastname: formData.lastname}, (error, response) => {
-      console.log(error);
-      console.log(response);
-    });
+    await profileUpdate({firstname: formData.firstname, lastname: formData.lastname})
+      .then(response => {
+        ToastSuccess();
+      })
+      .catch(error => {
+        ToastWarning();
+      })
   };
 
   return (

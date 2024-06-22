@@ -1,7 +1,7 @@
-import {Roles} from 'meteor/alanning:roles';
 import {ROLE} from "../../shared/enums/role.js";
+import {Roles} from 'meteor/alanning:roles';
 
 const roles = Object.values(ROLE);
-roles.forEach(role => {
-  Roles.createRole(role, {unlessExists: true});
-});
+for (const role of roles) {
+  // await Roles.createRole(role, {unlessExists: true});
+}

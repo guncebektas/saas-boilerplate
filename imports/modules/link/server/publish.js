@@ -1,7 +1,7 @@
 import {Meteor} from "meteor/meteor";
-import {Links} from "../database/links";
 import {PUBLISH} from "../enums/publish";
+import {linkRepository} from "../linkRepository";
 
 Meteor.publish(PUBLISH.LINKS, function () {
-  return Links.find();
+  return linkRepository.find();
 });

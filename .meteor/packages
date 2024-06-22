@@ -9,7 +9,7 @@ disable-oplog@1.0.7           # Disables default mongo oplog
 
 meteor-base@1.5.1             # Packages every Meteor app needs to have
 mobile-experience@1.1.1       # Packages for a great mobile UX
-mongo@1.16.8                  # The database Meteor supports right now
+mongo@1.16.10                  # The database Meteor supports right now
 reactive-var@1.0.12           # Reactive variable for tracker
 
 standard-minifier-css@1.9.2   # CSS minifier run for production mode
@@ -23,20 +23,20 @@ hot-module-replacement@0.5.3  # Update client in development without reloading t
 static-html@1.3.2             # Define static page content in .html files
 react-meteor-data             # React higher-order component for reactively tracking Meteor data
 
-logging@1.3.3
+logging@1.3.4
 zodern:types
 fetch@0.1.4
-email@2.2.5
+email@2.2.6
 percolate:migrations
 reywood:publish-composite
 
-accounts-base@2.2.10
+accounts-base@2.2.11
 accounts-password@2.4.0
 accounts-passwordless@2.1.4
-alanning:roles
+alanning:roles@=4.0.0-alpha.2
 
 jam:method
 mdg:validated-method
 ddp-rate-limiter@1.2.1
 
-montiapm:agent
+# montiapm:agent
