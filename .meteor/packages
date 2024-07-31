@@ -32,6 +32,7 @@ reywood:publish-composite
 accounts-base@3.0.0-rc300.4
 accounts-password@3.0.0-rc300.4
 accounts-passwordless@3.0.0-rc300.4
+accounts-2fa
 alanning:roles@=4.0.0-alpha.2
 
 jam:method

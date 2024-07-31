@@ -1,5 +1,5 @@
 import React from 'react';
-import {H2} from "../../components/heading/H2.jsx";
+import {H2} from "../../components/heading/Headings.jsx";
 import {useTracker} from "meteor/react-meteor-data";
 import {ticketRepository} from "../../../../imports/modules/tickets/ticketRepository.js";
 import {TICKET_PUBLICATION} from "../../../../imports/modules/tickets/enums/publication.js";

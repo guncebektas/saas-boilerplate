@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Button} from "flowbite-react";
-import {H2} from "../components/heading/H2.jsx";
+import {H2} from "../components/heading/Headings.jsx";
 
 export const Hello = () => {
   const [counter, setCounter] = useState(0);

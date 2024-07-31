@@ -69,8 +69,6 @@ Z
 ,client/ui/components/header/HeaderSearch.jsx,8/9/89d5bc364c54313ecf0c80d18c50e72b2b5c2845
 Y
 )imports/modules/user/server/user.guard.js,e/d/edd3b3eb7775cc739ef3321ee152e69ad24306c3
-S
-#client/ui/components/heading/H2.jsx,f/c/fcc3f5474b4ab5cba7611d83d1da56349a4b88cc
 X
 (client/ui/components/nav/NavItemDeep.jsx,4/9/4944ac7b45bdd3cdab9bfefdb875e52cebf421db
 c
@@ -381,8 +379,6 @@ i
 9imports/modules/shared/uniforms-tailwind/src/AutoForm.tsx,f/d/fd83d5fe1f5b15ed9ce525140c9c92f13043056d
 Å
 Q.idea/sonarlint/securityhotspotstore/c/d/cde930f567d0cdec41341ac3460e175f14e4a558,9/e/9e1751d24d53e495dd7d21bc688066cd2f45bcd0
-Å
-Q.idea/sonarlint/securityhotspotstore/c/d/cdcdeaac7f60d02417286952e6c94906d0042cef,0/d/0ddf9eb9999aedf046a343ca8610fb9dd1de3bdc
 Å
 Q.idea/sonarlint/securityhotspotstore/c/7/c7acdf1d58b5ac292d3478bc848a5d877cb7fb91,e/d/ed0d08b18be050f7f7b57f82151c3b0e44356419
 Å
@@ -999,14 +995,6 @@ o
 ?imports/modules/shared/uniforms-tailwind/src/baseFormClasses.ts,5/0/5074b72c31ff62134fd241c484e67f71ce81a137
 b
 2client/ui/pages/auth/passwordless/RequestToken.jsx,6/2/627aee57f44b09ee317318369bade161e704c57f
-O
-packages/method-main/.gitignore,3/0/3057eb2ccef617f4c66a1df2e5d951c248d4fe6f
-N
-packages/method-main/method.js,9/4/941c96b4a6f1e180a88cec2ef149a9dc0cb22809
-O
-packages/method-main/package.js,f/8/f8bca238c7f04d7dbdb07c44a3b7b48ad58d62a7
-N
-packages/method-main/README.md,0/c/0cf223fa93cef95a35f2d8c44b4952c77921dad4
 [
 +imports/modules/tickets/ticketRepository.js,0/d/0d5e76a013ee1618f4a6ba24943c69abdb51b582
 @
@@ -1021,10 +1009,6 @@ P
  client/ui/components/nav/Nav.jsx,3/8/380029f2a7cd84c75b1076662a74c7876647e623
 S
 #client/ui/pages/profile/Profile.jsx,1/7/17f8380325d2042df7ba4ac2f21a52fb65710ee6
-T
-$packages/method-main/test-methods.js,0/7/07ad90cacee1359f2584036550b249e0c798fe9b
-T
-$packages/method-main/method-tests.js,5/b/5b9f27e85eebdfe7beaba3a2df5c1308ae2322be
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 A
@@ -1114,3 +1098,9 @@ i
 9packages/meteor-method-feature-meteor-3-0-compat/utils.js,7/8/780563d6d2dcc0495ba58260554403d9eb0c140c
 k
 ;packages/meteor-method-feature-meteor-3-0-compat/.gitignore,9/5/9552b48e56b4bde49ec84c2956b8d78a4d03fe5e
+V
+&client/ui/pages/profile/Profile2FA.jsx,d/7/d7922d5a08d4e8dd08c2615daef5fd3b2e01aea3
+Y
+)client/ui/components/heading/Headings.jsx,6/5/6527f88b2633c600a65e98672e2de39f9a456b20
+q
+Anode_modules/flowbite-react/lib/esm/components/Button/Button.d.ts,4/9/495b59f299905fe89bb466507a5753ae43403b13

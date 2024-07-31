@@ -1,5 +1,5 @@
 import React from 'react';
-import {H2} from "../../components/heading/H2.jsx";
+import {H2} from "../../components/heading/Headings.jsx";
 
 export const Admin = () => {
   return (

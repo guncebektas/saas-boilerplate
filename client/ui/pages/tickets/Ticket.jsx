@@ -1,5 +1,5 @@
 import React from 'react';
-import {H2} from "../../components/heading/H2.jsx";
+import {H2} from "../../components/heading/Headings.jsx";
 import {AutoForm} from '../../../../imports/modules/shared/uniforms-tailwind/src';
 import {ticketUpsert} from "../../../../imports/modules/tickets/ticket.methods.js";
 import {ticketBridge} from "../../../../imports/modules/tickets/schemas/ticketSchema.js";

@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import {Button, Label, TextInput} from "flowbite-react";
-import {H2} from "../../components/heading/H2.jsx";
+import {H2} from "../../components/heading/Headings.jsx";
 import {useTracker} from "meteor/react-meteor-data";
 import {Meteor} from "meteor/meteor";
 import {PROFILE_PUBLICATION} from "../../../../imports/modules/profile/enums/publication.js";
 import {profileRepository} from "../../../../imports/modules/profile/profileRepository.js";
 import {profileUpdate} from "../../../../imports/modules/profile/profile.methods.js";
 import {ToastSuccess, ToastWarning} from "../../components/alert/Alert";
+import {Profile2FA} from "./Profile2FA";
 
 export const Profile = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ export const Profile = () => {
       setFormData({
         email: user?.emails[0].address || '',
         firstname: me.firstname || '',
-        lastname: me.lastname || '',
+        lastname: me.lastname || ''
       });
     }
   }, [user]);
@@ -50,33 +51,38 @@ export const Profile = () => {
   };
 
   return (
-    <div className="px-4 py-5 sm:p-6">
-      <H2 text="Profile"></H2>
-      <div className="grid grid-flow-col justify-stretch space-x-4">
-        <form className="flex max-w-md flex-col gap-4" onSubmit={handleSubmit}>
-          <div className="mb-2">
-            <div className="mb-2 block">
-              <Label htmlFor="email" value="Your email"/>
+    <div className="gap-3 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2">
+      <div className="px-4 py-5 sm:p-6">
+        <H2 text="Profile"></H2>
+        <div className="grid grid-flow-col justify-stretch space-x-4">
+          <form className="flex max-w-md flex-col gap-4" onSubmit={handleSubmit}>
+            <div className="mb-2">
+              <div className="mb-2 block">
+                <Label htmlFor="email" value="Your email"/>
+              </div>
+              <TextInput id="email" type="text" value={formData.email} disabled/>
             </div>
-            <TextInput id="email" type="text" value={formData.email} disabled/>
-          </div>
-          <div className="mb-2">
-            <div className="mb-2 block">
-              <Label htmlFor="firstname" value="Firstname"/>
+            <div className="mb-2">
+              <div className="mb-2 block">
+                <Label htmlFor="firstname" value="Firstname"/>
+              </div>
+              <TextInput id="firstname" type="text" value={formData.firstname} onChange={handleInputChange}/>
             </div>
-            <TextInput id="firstname" type="text" value={formData.firstname} onChange={handleInputChange}/>
-          </div>
-          <div className="mb-2">
-            <div className="mb-2 block">
-              <Label htmlFor="lastname" value="Lastname"/>
+            <div className="mb-2">
+              <div className="mb-2 block">
+                <Label htmlFor="lastname" value="Lastname"/>
+              </div>
+              <TextInput id="lastname" type="text" value={formData.lastname} onChange={handleInputChange}/>
             </div>
-            <TextInput id="lastname" type="text" value={formData.lastname} onChange={handleInputChange}/>
-          </div>
-          <div>
-            <Button type="submit" className="w-full flex justify-center py-1 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Save</Button>
-          </div>
-        </form>
+            <div>
+              <Button type="submit" className="w-full flex justify-center py-1 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Save</Button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div className="px-4 py-5 sm:p-6">
+        <Profile2FA/>
       </div>
     </div>
-  );
+  )
 };
