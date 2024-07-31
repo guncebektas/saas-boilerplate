@@ -3,5 +3,5 @@ import {Roles} from 'meteor/alanning:roles';
 
 const roles = Object.values(ROLE);
 for (const role of roles) {
-  // await Roles.createRole(role, {unlessExists: true});
+  await Roles.createRoleAsync(role, {unlessExists: true});
 }
