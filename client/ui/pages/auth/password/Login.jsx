@@ -3,8 +3,10 @@ import {Button, Label, TextInput} from 'flowbite-react';
 import {profileInsert} from "../../../../../imports/modules/profile/profile.methods.js";
 import {STATE_AUTH_PASSWORD_FORM} from "./enums/state.js";
 import {Accounts} from "meteor/accounts-base";
+import {useTranslator} from "../../../providers/i18n";
 
 export const Login = ({onStateChange}) => {
+  const t = useTranslator();
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -33,7 +35,7 @@ export const Login = ({onStateChange}) => {
 
   return (
     <div className="sm:mx-auto sm:w-full sm:max-w-md">
-      <h2 className="text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">Login</h2>
+      <h2 className="text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">{t('Login')}</h2>
 
       <div className="bg-white dark:bg-gray-900 py-8 px-4 mt-8 shadow sm:rounded-lg sm:px-10">
         <div>
