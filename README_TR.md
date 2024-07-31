@@ -24,8 +24,9 @@ Docker imajı ayağa kalkınca uygulamayı çalıştır.
 ```bash 
 npm run start
 ```
-Redis-oplog devredışı bırakıldıktan sonra mongodbnin gömülü komutu olan `meteor` komutu uygulamayı çalıştırmak için kullanılabilir.
+Redis-oplog devredışı bırakıldıktan sonra mongodb'nin gömülü komutu olan `meteor` komutu uygulamayı çalıştırmak için kullanılabilir.
 
+> Uygulamaya  http://localhost:3001/ adresinden erişilebilirsiniz.
 
 Canlı ortamı simule etmek için
 

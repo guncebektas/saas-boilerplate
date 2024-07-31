@@ -26,6 +26,8 @@ When docker images are up, run the app
 npm run start
 ```
 
+> The app should be available at  http://localhost:3001/
+
 You can use `meteor` command to run the application with its build in mongodb, after disabling redis-oplog
 
 To simulate production use
