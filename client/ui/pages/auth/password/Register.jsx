@@ -20,21 +20,19 @@ export const Register = ({onStateChange}) => {
       password: passwordRef.current.value
     };
 
-    Accounts.createUser({
+    Accounts.createUserAsync({
       email: formData.email,
       password: formData.password
-    }, (error, response) => {
+    }, async (error, response) => {
       if (error) {
         console.log(error);
         return;
       }
 
-      console.log(response);
-
-      profileInsert({_id: response.id}, (error, response) => {
-        console.log(error);
-        console.log(response);
-      });
+      await profileInsert({_id: response.id})
+        .then(response => {
+          window.location.reload();
+        })
     });
   };
 
