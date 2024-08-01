@@ -1,5 +1,5 @@
 import '../imports/modules/dummy/server';
-import '../imports/modules/link/server';
+import '../imports/modules/links/server';
 import '../imports/modules/profile/server';
 import '../imports/modules/user/server';
 import '../imports/modules/userPartition/server';
