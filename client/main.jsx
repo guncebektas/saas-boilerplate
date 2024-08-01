@@ -1,7 +1,7 @@
 import React from 'react';
 import {Meteor} from 'meteor/meteor';
 import i18n from 'meteor/universe:i18n';
-import {render} from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {App} from '/client/ui/App';
 
 const onChangeLocale = locale => {
@@ -47,5 +47,7 @@ const _setLocalization = language => {
 Meteor.startup(async () => {
   _setLocalization('en-US');
 
-  render(<App/>, document.getElementById('react-target'));
+  const container = document.getElementById('react-target');
+  const root = createRoot(container);
+  root.render(<App tab="home" />);
 });
