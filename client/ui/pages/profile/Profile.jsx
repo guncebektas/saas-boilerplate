@@ -22,9 +22,10 @@ export const Profile = () => {
     const handle = Meteor.subscribe(PROFILE_PUBLICATION.ME);
     if (handle.ready()) {
       const me = profileRepository.findOne({_id: Meteor.userId()}) || {};
+      let email  = user?.emails?.length > 0 ? user?.emails[0]?.address : '';
 
       setFormData({
-        email: user?.emails[0].address || '',
+        email,
         firstname: me.firstname || '',
         lastname: me.lastname || ''
       });
