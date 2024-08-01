@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import {Button, Label, TextInput} from 'flowbite-react';
-import {profileInsert} from "../../../../../imports/modules/profile/profile.methods.js";
+import {profileInsert} from "../../../../../imports/modules/profiles/profile.methods.js";
 import {STATE_AUTH_PASSWORD_FORM} from "./enums/state.js";
 
 export const ForgottenPassword = ({onStateChange}) => {

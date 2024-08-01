@@ -3,9 +3,9 @@ import {Button, Label, TextInput} from "flowbite-react";
 import {H2} from "../../components/heading/Headings.jsx";
 import {useTracker} from "meteor/react-meteor-data";
 import {Meteor} from "meteor/meteor";
-import {PROFILE_PUBLICATION} from "../../../../imports/modules/profile/enums/publication.js";
-import {profileRepository} from "../../../../imports/modules/profile/profileRepository.js";
-import {profileUpdate} from "../../../../imports/modules/profile/profile.methods.js";
+import {PROFILE_PUBLICATION} from "../../../../imports/modules/profiles/enums/publication.js";
+import {profileRepository} from "../../../../imports/modules/profiles/profileRepository.js";
+import {profileUpdate} from "../../../../imports/modules/profiles/profile.methods.js";
 import {ToastSuccess, ToastWarning} from "../../components/alert/Alert";
 import {Profile2FA} from "./Profile2FA";
 
