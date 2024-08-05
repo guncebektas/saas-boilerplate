@@ -7,7 +7,7 @@ import {PROFILE_PUBLICATION} from "../../../../imports/modules/profiles/enums/pu
 import {profileRepository} from "../../../../imports/modules/profiles/profileRepository.js";
 import {profileUpdate} from "../../../../imports/modules/profiles/profile.methods.js";
 import {ToastSuccess, ToastWarning} from "../../components/alert/Alert";
-import {Profile2FA} from "./Profile2FA";
+import {Profile2fa} from "./Profile2fa";
 
 export const Profile = () => {
   const [formData, setFormData] = useState({
@@ -82,7 +82,7 @@ export const Profile = () => {
         </div>
       </div>
       <div className="px-4 py-5 sm:p-6">
-        <Profile2FA/>
+        <Profile2fa/>
       </div>
     </div>
   )

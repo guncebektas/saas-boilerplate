@@ -29,9 +29,6 @@ export const Nav = () => {
             </button>
             <ul id="dropdown-pages" className="hidden py-2 space-y-2">
               <li>
-                <NavItemDeep link={ROUTE.PROFILE} text="Profile"/>
-              </li>
-              <li>
                 <NavItemDeep link={ROUTE.PRICE} text="Price"/>
               </li>
               <li>
