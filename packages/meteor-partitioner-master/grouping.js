@@ -182,7 +182,7 @@ Partitioner = {
 			throw new Meteor.Error(403, "User is already in a group");
 		}
 
-		return Meteor.users._partitionerDirect.update(userId, {$set: {group: groupId}});
+		return Meteor.users._partitionerDirect.updateAsync(userId, {$set: {group: groupId}});
 	},
 
 	async getUserGroup(userId) {

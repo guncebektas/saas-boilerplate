@@ -16,7 +16,7 @@ function userFindHook(userId, selector /*, options */) {
 };
 
 Meteor.users._partitionerBefore.find(userFindHook);
-await Meteor.users._partitionerBefore.findOneAsync(userFindHook);
+Meteor.users._partitionerBefore.findOneAsync(userFindHook);
 
 async function insertHook(userId, doc) {
 	if (!userId) throw new Meteor.Error(403, ErrMsg.userIdErr);

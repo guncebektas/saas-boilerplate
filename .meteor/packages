@@ -37,7 +37,7 @@ accounts-password@3.0.0-rc300.4
 accounts-passwordless@3.0.0-rc300.4
 accounts-2fa
 
-# wildhart:partitioner
+wildhart:partitioner
 
 alanning:roles@=4.0.0-alpha.2
 
