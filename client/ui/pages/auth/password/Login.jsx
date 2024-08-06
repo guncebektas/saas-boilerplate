@@ -23,6 +23,8 @@ export const Login = ({onStateChange}) => {
   const handleLogin = (e) => {
     e.preventDefault();
 
+    setOpenAlert(false);
+
     const formData = {
       email: emailRef.current.value,
       password: passwordRef.current.value

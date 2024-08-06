@@ -18,7 +18,9 @@ Alert.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export function Alert({ color, iconName, children }) {
+export function Alert({ show, color, iconName, children }) {
+  if (!show) return null;
+
   const icon = iconMap[iconName] || iconMap.info; // Default to info icon if iconName is invalid
 
   return (
