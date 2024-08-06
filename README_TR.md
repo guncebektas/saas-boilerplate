@@ -49,3 +49,18 @@ Canlıya almak için "mup" kullanıyoruz bu nedenle .deploy dosyasını kontrol 
 ```bash 
 npm run deploy
 ```
+
+### Roadmap
+- [x] Hesap yönetimi
+- [x] 2AD
+- [x] Sayfalar arası geçiş
+- [ ] Otomatik formlar
+- [ ] Fiyatlar sayfası
+- [ ] Ödeme sayfası
+- [ ] Lisans yönetimi
+- [ ] Multi-tenant database partitioning
+- [ ] Organizasyon yönetimi
+- [ ] Destek sayfası
+- [ ] Headless CMS entegrasyonu
+- [ ] AWS s3 entegrasyonu
+- [ ] Axios kullanımı

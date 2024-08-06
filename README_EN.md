@@ -51,3 +51,18 @@ We are using mup to deploy, so check .deploy folder for details
 ```bash 
 npm run deploy
 ```
+
+### Roadmap
+- [x] Account management
+- [x] 2FA
+- [x] Page routing
+- [ ] Autoform
+- [ ] Price page
+- [ ] Payment page
+- [ ] License management 
+- [ ] Multi-tenant database partitioning
+- [ ] Organization management
+- [ ] Support page
+- [ ] Headless CMS integration
+- [ ] AWS s3 integration
+- [ ] Axios implementation
