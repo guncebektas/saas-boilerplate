@@ -51,6 +51,9 @@ npm run deploy
 ```
 
 ### Roadmap
+- [x] Giriş
+- [x] Kayıt
+- [ ] Şifre kurtarma
 - [x] Hesap yönetimi
 - [x] 2AD
 - [x] Sayfalar arası geçiş

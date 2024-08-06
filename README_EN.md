@@ -53,7 +53,9 @@ npm run deploy
 ```
 
 ### Roadmap
-- [x] Account management
+- [x] Login
+- [x] Register
+- [ ] Forgotten password
 - [x] 2FA
 - [x] Page routing
 - [ ] Autoform
