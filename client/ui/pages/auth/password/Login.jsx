@@ -3,9 +3,13 @@ import {Button, Label, TextInput, Modal} from 'flowbite-react';
 import {STATE_AUTH_PASSWORD_FORM} from "./enums/state.js";
 import {useTranslator} from "../../../providers/i18n";
 import { useState } from "react";
+import PasswordInput from "../../../components/form/PasswordInput";
+import {Alert} from "../../../components/alert/Alert"
 
 export const Login = ({onStateChange}) => {
   const [openModal, setOpenModal] = useState(false);
+  const [openAlert, setOpenAlert] = useState(false);
+  const [errorMessage, setErrorMessage] = useState();
 
   const t = useTranslator();
   const emailRef = useRef();
@@ -28,10 +32,11 @@ export const Login = ({onStateChange}) => {
       if (error) {
         console.error(error);
 
-        if (error) {
-          if (error.error === "no-2fa-code") {
-            setOpenModal(true)
-          }
+        if (error.error === "no-2fa-code") {
+          setOpenModal(true)
+        } else {
+          setOpenAlert(true)
+          setErrorMessage(error.reason)
         }
 
         return;
@@ -86,18 +91,22 @@ export const Login = ({onStateChange}) => {
 
         <div className="bg-white dark:bg-gray-900 py-8 px-4 mt-8 shadow sm:rounded-lg sm:px-10">
           <div>
+            <Alert show={openAlert}  color="failure" iconName="warning">
+              <span className="font-medium">Error:</span> {errorMessage}
+            </Alert>
+
             <form className="space-y-6" onSubmit={handleLogin}>
               <div className="mb-1">
                 <div className="mb-2 block">
                   <Label htmlFor="email" value="Email Address"/>
                 </div>
-                <TextInput id="email" type="email" ref={emailRef} required/>
+                <TextInput id="email" type="email" placeholder="Enter your email" ref={emailRef} required/>
               </div>
               <div className="mb-1">
                 <div className="mb-2 block">
                   <Label htmlFor="password" value="Password"/>
                 </div>
-                <TextInput id="password" type="password" ref={passwordRef} required/>
+                <PasswordInput ref={passwordRef} required />
               </div>
 
               <div className="flex items-center justify-between">
