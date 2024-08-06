@@ -6,7 +6,7 @@ import {Meteor} from "meteor/meteor";
 import {PROFILE_PUBLICATION} from "../../../../imports/modules/profiles/enums/publication.js";
 import {profileRepository} from "../../../../imports/modules/profiles/profileRepository.js";
 import {profileUpdate} from "../../../../imports/modules/profiles/profile.methods.js";
-import {ToastSuccess, ToastWarning} from "../../components/alert/Alert";
+import {ToastSuccess, ToastWarning} from "../../components/alert/Toast";
 import {Profile2fa} from "./Profile2fa";
 
 export const Profile = () => {
