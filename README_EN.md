@@ -13,6 +13,15 @@ enough to contribute.
 - Install [Meteor.js](https://www.meteor.com/developers/install)
 - Make sure you have [Docker](https://docs.docker.com/install) and [Docker Compose](https://docs.docker.com/compose/install/) installed and operational.
 
+### Packages
+Soma of the important packages used in the project.
+- alanning:roles
+- jam:methods
+- jam:offline
+- uniforms
+- universe:i18n
+- zod
+
 ### Dev environment
 Run mongodb (replica set) and redis for development environment
 
@@ -52,19 +61,27 @@ We are using mup to deploy, so check .deploy folder for details
 npm run deploy
 ```
 
+### APM
+Monti
+
 ### Roadmap
 - [x] Login
 - [x] Register
+- [x] Roles
 - [ ] Forgotten password
 - [x] 2FA
 - [x] Page routing
-- [ ] Autoform
-- [ ] Price page
+- [x] Uniform with zod bridge
+- [x] Basic form components written with tailwind
+- [x] Price page
 - [ ] Payment page
 - [ ] License management 
 - [ ] Multi-tenant database partitioning
 - [ ] Organization management
+- [ ] User management
 - [ ] Support page
 - [ ] Headless CMS integration
+- [ ] Complex form components written with tailwind
 - [ ] AWS s3 integration
 - [ ] Axios implementation
+- [ ] Openapi implementation
