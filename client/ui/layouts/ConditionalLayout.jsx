@@ -4,6 +4,7 @@ import {Nav} from "../components/nav/Nav.jsx";
 import {Router} from "../../routes/Router.js";
 import {Auth} from "../pages/auth/Auth.jsx";
 import {useTracker} from "meteor/react-meteor-data";
+import {NavMobile} from "../components/navMobile/NavMobile";
 
 const InnerLayout = () => {
   const user = useTracker(() => { return Meteor.userId() });
@@ -26,6 +27,8 @@ const InnerLayout = () => {
             <Router/>
           </section>
         </main>
+
+        <NavMobile/>
       </section>
     );
   }
