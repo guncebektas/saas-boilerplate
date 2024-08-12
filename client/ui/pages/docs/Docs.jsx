@@ -92,10 +92,8 @@ export const Docs = () => {
                 <a
                   href={action.href}
                   target="_blank"
-                  className="focus:outline-none"
+                  className="text-gray-500 dark:text-gray-400"
                 >
-                  {/* Extend touch target to entire panel */}
-                  <span className="absolute inset-0" aria-hidden="true"/>
                   {action.title}
                 </a>
               </h3>
