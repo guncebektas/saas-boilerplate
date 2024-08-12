@@ -20,8 +20,8 @@ export const Tickets = () => {
     return ticketRepository.find().fetch();
   });
 
-  const handleRemove = (_id) => {
-    ticketRemove({_id});
+  const handleRemove = async (_id) => {
+    await ticketRemove({_id});
   };
 
   return (
