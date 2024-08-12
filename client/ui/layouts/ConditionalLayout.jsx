@@ -22,7 +22,7 @@ const InnerLayout = () => {
         <Header/>
         <Nav/>
 
-        <main className="p-4 md:ml-64 h-auto pt-20">
+        <main className="px-4 md:ml-64 h-auto sm:pt-20">
           <section className="bg-white dark:bg-gray-900">
             <Router/>
           </section>
