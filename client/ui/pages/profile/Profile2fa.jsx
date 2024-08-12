@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Label, TextInput} from "flowbite-react";
-import {H3} from "../../components/heading/Headings.jsx";
+import {H2} from "../../components/heading/Headings.jsx";
 import {Meteor} from "meteor/meteor";
 import {Buffer} from "buffer";
 
@@ -66,10 +66,10 @@ export const Profile2fa = () => {
   };
 
   return (
-    <>
+    <div className="px-4 py-5 sm:p-6">
       {enabled2fa ? (
         <>
-          <H3 text="2FA Enabled" />
+          <H2 text="2FA Enabled"/>
           <p>Your account is using 2FA</p>
           <Button
             onClick={disable2fa}
@@ -81,7 +81,7 @@ export const Profile2fa = () => {
         </>
       ) : (
         <>
-          <H3 text="Secure with 2FA" />
+          <H2 text="Secure with 2FA"/>
           <p>Scan the code to enable 2FA</p>
           <div className="flex max-w-md flex-col gap-4">
             <img
@@ -101,26 +101,28 @@ export const Profile2fa = () => {
             </Button>
           </div>
 
-          <form className="px-3" onSubmit={enable2fa}>
-            <div className="mb-2">
-              <div className="mb-2 block">
-                <Label htmlFor="code" value="Code" />
-                <TextInput id="code" type="number" onChange={handleInputChange} />
+          <div className="grid grid-flow-col justify-stretch space-x-4">
+            <form className="flex max-w-md flex-col gap-4" onSubmit={enable2fa}>
+              <div className="mb-2">
+                <div className="mb-2 block">
+                  <Label htmlFor="code" value="Code"/>
+                  <TextInput id="code" type="number" onChange={handleInputChange}/>
+                </div>
               </div>
-            </div>
-            <div className="mb-2">
-              <div className="mb-2 block">
-                <Button
-                  type="submit"
-                  className="w-full flex justify-center py-1 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Save
-                </Button>
+              <div className="mb-2">
+                <div className="mb-2 block">
+                  <Button
+                    type="submit"
+                    className="w-full flex justify-center py-1 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  >
+                    Save
+                  </Button>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </>
       )}
-    </>
+    </div>
   );
 };
