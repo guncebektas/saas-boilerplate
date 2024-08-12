@@ -11,7 +11,7 @@ export const Nav = () => {
   return (
     <Sidebar
       aria-label="Sidenav"
-      id="default-sidebar"
+      id="drawer-navigation"
       className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
       >
       <div className="overflow-y-auto pt-16 sm:pt-14 px-3 h-full">
@@ -19,7 +19,7 @@ export const Nav = () => {
           <li>
             <NavItem link={ROUTE.HOME} icon="dashboard" text="Dashboard"/>
           </li>
-          <li>
+          <ul>
             <Sidebar.Collapse
               icon={HiShoppingBag}
               label="E-commerce"
@@ -34,7 +34,7 @@ export const Nav = () => {
               <Sidebar.Item href="#">Refunds</Sidebar.Item>
               <Sidebar.Item href="#">Shipping</Sidebar.Item>
             </Sidebar.Collapse>
-          </li>
+          </ul>
           <li>
             <NavItem link={ROUTE.PRICE} icon="money-bill-wave" text="Prices"/>
           </li>
