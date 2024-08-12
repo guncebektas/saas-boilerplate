@@ -41,10 +41,8 @@ accounts-2fa
 
 alanning:roles@=4.0.0-alpha.2
 
-
 jam:method@1.7.1
 jam:offline
-mdg:validated-method
 ddp-rate-limiter@1.2.1-rc300.4
 
 # montiapm:agent
