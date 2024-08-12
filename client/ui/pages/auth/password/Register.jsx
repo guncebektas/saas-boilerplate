@@ -38,6 +38,12 @@ export const Register = ({onStateChange}) => {
 
   return (
     <div className="sm:mx-auto sm:w-full sm:max-w-md">
+      <div className="flex flex-col items-center justify-center mx-auto text-4xl scale-150">
+        <a href="#" className="flex items-center mb-6 font-semibold text-gray-900 dark:text-white">
+          <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo"/>
+          Flowbite
+        </a>
+      </div>
       <h2 className="text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">Register</h2>
 
       <div className="bg-white dark:bg-gray-900 py-8 px-4 mt-8 shadow sm:rounded-lg sm:px-10">

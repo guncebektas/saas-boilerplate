@@ -88,12 +88,21 @@ export const Login = ({onStateChange}) => {
         </form>
       </Modal>
 
+      <div className="flex flex-col items-center justify-center mx-auto text-4xl scale-150">
+        <a href="#" className="flex items-center mb-6 font-semibold text-gray-900 dark:text-white">
+          <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo"/>
+          Flowbite
+        </a>
+      </div>
+
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 className="text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">{t('Login')}</h2>
+        <h2 className="text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+          {t('Login')}
+        </h2>
 
         <div className="bg-white dark:bg-gray-900 py-8 px-4 mt-8 shadow sm:rounded-lg sm:px-10">
           <div>
-            <Alert show={openAlert}  color="failure" iconName="warning">
+            <Alert show={openAlert} color="failure" iconName="warning">
               <span className="font-medium">Error:</span> {errorMessage}
             </Alert>
 
@@ -108,7 +117,7 @@ export const Login = ({onStateChange}) => {
                 <div className="mb-2 block">
                   <Label htmlFor="password" value="Password"/>
                 </div>
-                <PasswordInput ref={passwordRef} required />
+                <PasswordInput ref={passwordRef} required/>
               </div>
 
               <div className="flex items-center justify-between">
