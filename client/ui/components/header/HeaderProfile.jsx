@@ -107,7 +107,7 @@ export const HeaderProfile = () => {
             >
               <span className="flex items-center">
                 <FontAwesomeIcon icon="pen-ruler"/>
-                Flowbite Pro
+                Flowbite
               </span>
             </a>
           </li>
