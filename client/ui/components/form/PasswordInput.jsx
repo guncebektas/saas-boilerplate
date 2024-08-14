@@ -14,7 +14,7 @@ const PasswordInput = forwardRef((props, ref) => {
     <div className="relative w-full">
       <TextInput
         type={passwordVisible ? 'text' : 'password'}
-        placeholder="Enter your password"
+        placeholder="Type your password"
         className="w-full"
         ref={ref}
         {...props}
