@@ -1,38 +1,54 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {Button, Label, TextInput} from 'flowbite-react';
 import {STATE_AUTH_PASSWORD_FORM} from "./enums/state.js";
 import {Accounts} from "meteor/accounts-base";
 import {profileInsert} from "../../../../../imports/modules/profiles/profile.methods.js";
+import PasswordInput from "../../../components/form/PasswordInput";
+import {Alert} from "../../../components/alert/Alert";
 
 export const Register = ({onStateChange}) => {
+  const [openAlert, setOpenAlert] = useState(false);
+  const [errorMessage, setErrorMessage] = useState();
+
   const emailRef = useRef();
   const passwordRef = useRef();
+  const passwordAgainRef = useRef();
 
   const handleState = () => {
     onStateChange(STATE_AUTH_PASSWORD_FORM.LOGIN);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setOpenAlert(false);
 
     const formData = {
       email: emailRef.current.value,
-      password: passwordRef.current.value
+      password: passwordRef.current.value,
+      passwordAgain: passwordAgainRef.current.value,
     };
 
-    Accounts.createUserAsync({
-      email: formData.email,
-      password: formData.password
-    }, async (error, response) => {
-      if (error) {
-        console.log(error);
-        return;
-      }
+    if (formData.password !== formData.passwordAgain) {
+      setOpenAlert(true)
+      setErrorMessage(`Passwords should be same.`)
+      return;
+    }
 
+    await Accounts.createUserAsync({
+      email: formData.email,
+      password: formData.password,
+      passwordAgain: formData.passwordAgain
+    }).then(async response => {
       await profileInsert({_id: response.id})
         .then(response => {
           window.location.reload();
         })
+    }).catch(error => {
+      console.error(error);
+
+      setOpenAlert(true)
+      setErrorMessage(error.reason)
     });
   };
 
@@ -53,18 +69,28 @@ export const Register = ({onStateChange}) => {
 
       <div className="bg-white dark:bg-gray-900 py-8 px-4 mt-8 shadow sm:rounded-lg sm:px-10">
         <div>
+          <Alert show={openAlert} color="failure" iconName="warning">
+            <span className="font-medium">Error:</span> {errorMessage}
+          </Alert>
+
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="mb-2">
               <div className="mb-2 block">
                 <Label htmlFor="email" value="Email Address"/>
               </div>
-              <TextInput id="email" type="email" ref={emailRef} required/>
+              <TextInput id="email" type="email" ref={emailRef} placeholder="Type your email" required/>
             </div>
             <div className="mb-2">
               <div className="mb-2 block">
                 <Label htmlFor="password" value="Password"/>
               </div>
-              <TextInput id="password" type="password" ref={passwordRef} required/>
+              <PasswordInput ref={passwordRef} required/>
+            </div>
+            <div className="mb-2">
+              <div className="mb-2 block">
+                <Label htmlFor="passwordAgain" value="Password Again"/>
+              </div>
+              <PasswordInput ref={passwordAgainRef} required/>
             </div>
             <div>
               <Button type="submit" className="w-full flex justify-center py-1 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Register</Button>
