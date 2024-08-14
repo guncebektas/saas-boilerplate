@@ -6,7 +6,7 @@ class ProfileService extends BaseService {
    * @param _id {string}
    * @return {Promise<string>}
    */
-  async add(_id) {
+  async create(_id) {
     return profileRepository.insertAsync({_id});
   }
 

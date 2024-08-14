@@ -2,7 +2,7 @@ import React, {useRef, useState} from 'react';
 import {Button, Label, TextInput} from 'flowbite-react';
 import {STATE_AUTH_PASSWORD_FORM} from "./enums/state.js";
 import {Accounts} from "meteor/accounts-base";
-import {profileInsert} from "../../../../../imports/modules/profiles/profile.methods.js";
+import {profileCreate} from "../../../../../imports/modules/profiles/profile.methods.js";
 import PasswordInput from "../../../components/form/PasswordInput";
 import {Alert} from "../../../components/alert/Alert";
 
@@ -40,7 +40,7 @@ export const Register = ({onStateChange}) => {
       password: formData.password,
       passwordAgain: formData.passwordAgain
     }).then(async response => {
-      await profileInsert({_id: response.id})
+      await profileCreate({_id: response.id})
         .then(response => {
           window.location.reload();
         })

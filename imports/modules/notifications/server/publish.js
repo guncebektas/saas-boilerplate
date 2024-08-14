@@ -1,7 +1,7 @@
 import {Meteor} from "meteor/meteor";
 import {PUBLISH} from "../enums/publish";
-import {linkRepository} from "../linkRepository";
+import {notificationRepository} from "../notificationRepository";
 
-Meteor.publish(PUBLISH.LINKS, function () {
-  return linkRepository.find();
+Meteor.publish(PUBLISH.NOTIFICATIONS, function () {
+  return notificationRepository.find();
 });
