@@ -12,7 +12,7 @@ export const Prices = () => {
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Designed for business teams like yours</h2>
         <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">We focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
       </div>
-      <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+      <div className="my-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10">
         <PriceItem
           title={'Starter'}
           subTitle={'Best option for personal use & for your next project'}
