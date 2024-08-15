@@ -39,11 +39,8 @@ export const Register = ({onStateChange}) => {
       email: formData.email,
       password: formData.password,
       passwordAgain: formData.passwordAgain
-    }).then(async response => {
-      await profileCreate({_id: response.id})
-        .then(response => {
-          window.location.reload();
-        })
+    }).then(response => {
+      window.location.reload();
     }).catch(error => {
       console.error(error);
 

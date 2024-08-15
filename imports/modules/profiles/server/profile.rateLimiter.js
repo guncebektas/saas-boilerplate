@@ -1,8 +1,7 @@
 import {RATE_LIMITER} from '../enums/rateLimitter.js';
-import {profileCreate, profileUpdate} from "../profile.methods.js";
+import {profileUpdate} from "../profile.methods.js";
 
 const LISTS_METHODS = [
-  profileCreate,
   profileUpdate,
 ].map(method => method.name);
 

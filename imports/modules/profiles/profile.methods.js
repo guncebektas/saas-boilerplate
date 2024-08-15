@@ -2,14 +2,6 @@ import {createMethod} from 'meteor/jam:method'; // can import { Methods } from '
 import {z} from "zod";
 import {profileService} from "./profileService.js";
 
-export const profileCreate = createMethod({
-  name: 'profile.create',
-  schema: z.object({_id: z.string()}),
-  async run({_id}) {
-    return profileService.create(_id);
-  }
-});
-
 export const profileUpdate = createMethod({
   name: 'profile.update',
   schema: z.object({firstname: z.string(), lastname: z.string()}),
