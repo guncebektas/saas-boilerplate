@@ -1,42 +1,32 @@
-import Swal from 'sweetalert2'
-export const ToastWarning = (text = 'An error occurred, please try again', object = {}) => {
-  let options = {
-    toast: true,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener('mouseenter', Swal.stopTimer);
-      toast.addEventListener('mouseleave', Swal.resumeTimer);
-    },
-    position: 'top-end',
-    icon: 'warning',
-    text: `${text}.`,
-    showCloseButton: true,
-    showConfirmButton: false
-  };
+import React from 'react';
+import { Alert as FAlert} from 'flowbite-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle, faCheckCircle, faExclamationTriangle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
-  options = {...options, ...object};
+// Map icon names to Font Awesome icons
+const iconMap = {
+  info: faInfoCircle,
+  success: faCheckCircle,
+  warning: faExclamationTriangle,
+  error: faTimesCircle, // Changed to 'error' to match 'failure'
+};
 
-  Swal.fire(options).then(r => console.log(r));
-}
+Alert.propTypes = {
+  color: PropTypes.oneOf(['info', 'success', 'warning', 'failure']).isRequired,
+  iconName: PropTypes.oneOf(['info', 'success', 'warning', 'error']).isRequired,
+  children: PropTypes.node.isRequired,
+};
 
-export const ToastSuccess = (text = 'Completed successfully', object = {}) => {
-  let options = {
-    toast: true,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener('mouseenter', Swal.stopTimer);
-      toast.addEventListener('mouseleave', Swal.resumeTimer);
-    },
-    position: 'top-end',
-    icon: 'success',
-    text: `${text}.`,
-    showCloseButton: true,
-    showConfirmButton: false
-  };
+export function Alert({ show, color, iconName, children }) {
+  if (!show) return null;
 
-  options = {...options, ...object};
+  const icon = iconMap[iconName] || iconMap.info; // Default to info icon if iconName is invalid
 
-  Swal.fire(options).then(r => console.log(r));
+  return (
+    <FAlert color={color} className="flex items-center space-x-3 mb-3">
+      <FontAwesomeIcon icon={icon} />
+      {children}
+    </FAlert>
+  );
 }

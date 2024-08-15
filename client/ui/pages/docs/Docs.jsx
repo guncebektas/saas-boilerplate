@@ -1,7 +1,7 @@
 import React from "react";
 import {useFind, useSubscribe} from "meteor/react-meteor-data";
-import {PUBLISH} from "../../../../imports/modules/link/enums/publish";
-import {linkRepository} from "../../../../imports/modules/link/linkRepository";
+import {PUBLISH} from "../../../../imports/modules/links/enums/publish";
+import {linkRepository} from "../../../../imports/modules/links/linkRepository";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -92,10 +92,8 @@ export const Docs = () => {
                 <a
                   href={action.href}
                   target="_blank"
-                  className="focus:outline-none"
+                  className="text-gray-500 dark:text-gray-400"
                 >
-                  {/* Extend touch target to entire panel */}
-                  <span className="absolute inset-0" aria-hidden="true"/>
                   {action.title}
                 </a>
               </h3>

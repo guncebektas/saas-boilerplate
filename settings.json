@@ -1,6 +1,7 @@
 {
   "public": {
-
+    "appName": "Saas Boilerplate",
+    "defaultLanguage": "en-US"
   },
   "private": {
     "mailUrl": "smtp://gunce@ritapos.com:xer78pDeneme99*@smtp.yandex.com:587",

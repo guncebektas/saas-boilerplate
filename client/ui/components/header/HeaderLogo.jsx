@@ -12,6 +12,8 @@ export const HeaderLogo = () => {
           </g>
         </svg>
       </div>
-      <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SaaS Boilerplate</span>
+      <span className="hidden md:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+        SaaS Boilerplate
+      </span>
     </Link>);
 };

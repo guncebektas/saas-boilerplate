@@ -1,7 +1,6 @@
 import {z} from 'zod';
 import {ZodBridge} from 'uniforms-bridge-zod';
 
-
 export const ticketFormSchema = {
   message: z.string(),
   question: z.string(),

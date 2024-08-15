@@ -12,6 +12,15 @@ Meteor.js 'e yaklaşımımızda bazı küçük farklılıklar var. Ancak Meteor.
 - [Meteor.js](https://www.meteor.com/developers/install)'i kurun.
 - [Docker](https://docs.docker.com/install) ve [Docker Compose](https://docs.docker.com/compose/install/) kurulmuş ve çalışır olması gerekir.
 
+### Paketler
+Proje içerisinde kullanılan önemli paketler
+- alanning:roles
+- jam:methods
+- jam:offline
+- uniforms
+- universe:i18n
+- zod
+
 ### Geliştirici ortamı
 Geliştirici ortamı için Mongodb (replica set) ve redis.
 
@@ -24,8 +33,9 @@ Docker imajı ayağa kalkınca uygulamayı çalıştır.
 ```bash 
 npm run start
 ```
-Redis-oplog devredışı bırakıldıktan sonra mongodbnin gömülü komutu olan `meteor` komutu uygulamayı çalıştırmak için kullanılabilir.
+Redis-oplog devredışı bırakıldıktan sonra mongodb'nin gömülü komutu olan `meteor` komutu uygulamayı çalıştırmak için kullanılabilir.
 
+> Uygulamaya  http://localhost:3001/ adresinden erişilebilirsiniz.
 
 Canlı ortamı simule etmek için
 
@@ -48,3 +58,28 @@ Canlıya almak için "mup" kullanıyoruz bu nedenle .deploy dosyasını kontrol 
 ```bash 
 npm run deploy
 ```
+
+### APM
+Monti
+
+### Roadmap
+- [x] Giriş
+- [x] Kayıt
+- [x] Roller
+- [ ] Şifre kurtarma
+- [x] Hesap yönetimi
+- [x] 2AD
+- [x] Sayfalar arası geçiş
+- [x] Zor köprülü uniform
+- [x] Tailwind ile yazılmış basit form elemanları
+- [x] Fiyatlar sayfası
+- [ ] Ödeme sayfası
+- [ ] Lisans yönetimi
+- [ ] Multi-tenant database partitioning
+- [ ] Organizasyon yönetimi
+- [ ] Kullanıcı yönetimi
+- [ ] Destek sayfası
+- [ ] Headless CMS entegrasyonu
+- [ ] AWS s3 entegrasyonu
+- [ ] Axios kullanımı
+- [ ] Openapi implementation
