@@ -942,12 +942,8 @@ T
 $client/ui/pages/prices/PriceItem.jsx,a/4/a42d423aa5ae3edef32c56632ab0041dc9f4e063
 V
 &client/ui/pages/profile/Profile2fa.jsx,3/9/3948dfceaecbf0d3abd78d6b4bc9da7353f8f34a
-c
-3imports/modules/notifications/schemas/linkSchema.js,2/8/28e7024ed15ef951f757349ef9c70bc79ea82aed
 g
 7imports/modules/notifications/database/notifications.js,d/e/dea3ecfac8a6c3fd83593dd54b03f987cf8c8241
-\
-,imports/modules/notifications/linkService.js,1/8/18b4f778ec282179e274d88df507ec516ffdc5e0
 \
 ,packages/meteor-partitioner-master/common.js,5/9/5916ec26cc47f27fb50376158426fb02fad1c2e5
 ]
@@ -958,10 +954,6 @@ _
 /imports/modules/notifications/server/publish.js,8/4/841b67137a80ae4623774c7071da12e22a759a0b
 \
 ,packages/meteor-partitioner-master/README.md,1/d/1df9438c0c07aa5a97a24466193fece129d73c98
-]
--imports/modules/notifications/link.methods.js,3/9/39708562c18e663d3ccf4772d9ddc7c314d88ca0
-_
-/imports/modules/notifications/linkRepository.js,8/9/89c7a4efef4dd45fc6fb77741908e3dc429b2af2
 [
 +client/ui/components/form/PasswordInput.jsx,a/b/abace4e060bcb0fc9277fd6b61b55ebe36fbca39
 T
