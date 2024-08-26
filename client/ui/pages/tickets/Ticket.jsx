@@ -9,7 +9,7 @@ import {TICKET_PUBLICATION} from "../../../../imports/modules/tickets/enums/publ
 import {ticketRepository} from "../../../../imports/modules/tickets/ticketRepository.js";
 import {FORM_TYPE} from "../../../shared/enums/formType.js";
 
-export const Ticket = () => {
+export const Avukat = () => {
   const {_id} = useParams();
 
   let ticket = {};
@@ -38,7 +38,7 @@ export const Ticket = () => {
 
   return (
     <div className="px-4 py-5 sm:p-6">
-      <H2 text="Ticket"></H2>
+      <H2 text="Avukat"></H2>
       <div className="grid grid-flow-col justify-stretch space-x-4">
         <AutoForm schema={ticketBridge} model={ticket} onSubmit={handleSubmit}/>
       </div>

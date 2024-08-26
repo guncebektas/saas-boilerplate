@@ -8,7 +8,8 @@ import {Profile} from "../ui/pages/profile/Profile.jsx";
 import {Prices} from "../ui/pages/prices/Prices.jsx";
 import {Tickets} from "../ui/pages/tickets/Tickets.jsx";
 import {Ticket} from "../ui/pages/tickets/Ticket.jsx";
-import {Settings} from "../ui/pages/settings/Settings.jsx";
+import {Settings} from "../ui/pages/settings/Settings.jsx"
+import {Avukat} from "../ui/pages/avukat/Avukat.jsx";
 
 export const Router = () => (
   <Routes>
@@ -20,5 +21,6 @@ export const Router = () => (
     <Route path={ROUTE.SETTINGS} element={<Settings/>}/>
     <Route path={ROUTE.TICKETS} element={<Tickets/>}/>
     <Route path={ROUTE.TICKET} element={<Ticket/>}/>
+    <Route path={ROUTE.AVUKAT} element={<Avukat/>}/>
   </Routes>
 );

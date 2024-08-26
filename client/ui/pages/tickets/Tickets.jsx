@@ -30,7 +30,7 @@ export const Tickets = () => {
         <div className="sm:flex sm:items-start sm:justify-between">
           <div>
             <div className="flex items-center">
-              <H2 text="Ticket"></H2>
+              <H2 text="Avukat"></H2>
 
               <div className="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
                 <Link to={setParam(ROUTE.TICKET, {key: '_id', value: 'new'})}>

@@ -9,4 +9,5 @@ export const ROUTE = {
   SETTINGS: '/settings',
   TICKETS: '/ticket/list',
   TICKET: '/ticket/form/:_id',
+  AVUKAT: '/avukat',
 };
