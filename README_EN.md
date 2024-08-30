@@ -85,3 +85,6 @@ Monti
 - [ ] AWS s3 integration
 - [ ] Axios implementation
 - [ ] Openapi implementation
+
+
+ meteor npm install --save @babel/runtime zod uniforms-bridge-zod
