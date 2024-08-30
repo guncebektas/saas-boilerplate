@@ -49,12 +49,15 @@ export const Nav = () => {
           </ul>
         <ul className="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
           <li>
-            <NavItem link={ROUTE.CONTACT_REQUEST} icon="clipboard" text="Contact Request"/>
+            <NavItem link={ROUTE.CONTACT_FORM} icon="clipboard" text="Contact us"/>
+          </li>
+          <li>
+            <NavItem link={ROUTE.CONTACT_REQUESTS} icon="clipboard" text="Contact request"/>
           </li>
         </ul>
         <ul className="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
           <li>
-            <NavItem link={ROUTE.DOCS} icon="clipboard" text="Docs"/>
+          <NavItem link={ROUTE.DOCS} icon="clipboard" text="Docs"/>
           </li>
         </ul>
       </div>

@@ -9,18 +9,20 @@ import { Prices } from '../ui/pages/prices/Prices.jsx';
 import { Tickets } from '../ui/pages/tickets/Tickets.jsx';
 import { Ticket } from '../ui/pages/tickets/Ticket.jsx';
 import { Settings } from '../ui/pages/settings/Settings.jsx';
-import ContactRequest from '../ui/pages/contactRequest/ContactRequest';
+import { ContactForm } from '../ui/pages/contacts/ContactForm';
+import {ContactRequests} from "../ui/pages/contacts/ContactRequests";
 
 export const Router = () => (
   <Routes>
     <Route path={ROUTE.ADMIN} element={<Admin />} />
     <Route path={ROUTE.DOCS} element={<Docs />} />
     <Route path={ROUTE.HOME} element={<Hello />} />
+    <Route path={ROUTE.CONTACT_FORM} element={<ContactForm />} />
+    <Route path={ROUTE.CONTACT_REQUESTS} element={<ContactRequests />} />
     <Route path={ROUTE.PROFILE} element={<Profile />} />
     <Route path={ROUTE.PRICE} element={<Prices />} />
     <Route path={ROUTE.SETTINGS} element={<Settings />} />
-    <Route path={ROUTE.TICKETS} element={<Tickets />} />
     <Route path={ROUTE.TICKET} element={<Ticket />} />
-    <Route path={ROUTE.CONTACT_REQUEST} element={<ContactRequest />} />
+    <Route path={ROUTE.TICKETS} element={<Tickets />} />
   </Routes>
 );
