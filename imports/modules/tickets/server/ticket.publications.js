@@ -1,22 +1,26 @@
-import {Meteor} from "meteor/meteor";
-import {TICKET_PUBLICATION} from "../enums/publication.js";
-import {check} from "meteor/check";
-import {ticketRepository} from "../ticketRepository.js";
-
-Meteor.publish(TICKET_PUBLICATION.ONE, function (ticketId) {
-  check(ticketId, String);
-
-  if (!this.userId) {
-    return this.ready();
-  }
-
-  return ticketRepository.find({_id: ticketId});
-});
+import { Meteor } from 'meteor/meteor';
+import { ticketRepository } from '../ticketRepository.js';
+import { TICKET_PUBLICATION } from '../enums/publication.js';
 
 Meteor.publish(TICKET_PUBLICATION.ALL, function () {
-  if (!this.userId) {
-    return this.ready();
-  }
+  return ticketRepository.find();
+});
 
-  return ticketRepository.find({});
+Meteor.publish(TICKET_PUBLICATION.ONE, function (_id) {
+  return ticketRepository.find({ _id });
+});
+
+Meteor.publish(TICKET_PUBLICATION.MINE, function () {
+  return ticketRepository.find({ userId: this.userId });
+});
+Meteor.publish(TICKET_PUBLICATION.SEARCH, function (query) {
+  console.log('Search query received:', query);
+  return ticketRepository.find({
+    $or: [
+      { message: { $regex: query, $options: 'i' } },
+      { title: { $regex: query, $options: 'i' } },
+      { description: { $regex: query, $options: 'i' } },
+      { status: { $regex: query, $options: 'i' } }
+    ]
+  });
 });

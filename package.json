@@ -32,6 +32,7 @@
     "flowbite": "^2.0.0",
     "flowbite-react": "^0.6.4",
     "localforage": "^1.10.0",
+    "lodash.isequal": "^4.5.0",
     "match-sorter": "^6.3.1",
     "meteor-node-stubs": "^1.2.1",
     "postcss": "^8.4.12",
