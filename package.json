@@ -1,0 +1,60 @@
+{
+  "name": "SaaSBoilerplate",
+  "private": true,
+  "scripts": {
+    "start": "MONGO_URL=mongodb://localhost:27017/saas meteor --exclude-archs web.browser.legacy,web.cordova --settings settings.json --port 3001",
+    "simulate-production": "MONGO_URL=mongodb://localhost:27017/saas meteor -s settings.json --port 3001 --production",
+    "start-warn-old-api": "MONGO_URL=mongodb://localhost:27017/saas WARN_WHEN_USING_OLD_API=true meteor --exclude-archs web.browser.legacy,web.cordova --settings settings.json --port 3001",
+    "start-verbose": "MONGO_URL=mongodb://localhost:27017/saas NODE_OPTIONS=--trace-warnings meteor -s settings.json --port 3001 --verbose",
+    "trace-warnings": "MONGO_URL=mongodb://localhost:27017/saas NODE_OPTIONS=--trace-warnings meteor -s settings.json --port 3001",
+    "list": "meteor list --tree",
+    "list-details": "meteor list --json --detais",
+    "test": "TEST_WATCH=1 MONGO_URL=mongodb://localhost:27017/saas meteor -s settings.json --port 3001 test --driver-package meteortesting:mocha johanbrook:publication-collector",
+    "visualize": "MONGO_URL=mongodb://localhost:27017/saas meteor -s settings.json --port 3001 --production --extra-packages bundle-visualizer",
+    "cypress": "cypress run",
+    "cypress-run": "cypress run",
+    "cypress-open": "cypress open",
+    "docker": "mkdir -p ../saas-volume/db && docker compose -f .docker/docker-compose.yml up -d",
+    "dev-env": "mkdir -p ../saas-volume/db && docker compose -f .docker/docker-compose-dev.yml up -d",
+    "lint": "eslint .",
+    "pretest": "npm run lint --silent",
+    "deploy": "cd .deploy && mup deploy"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.23.5",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "autoprefixer": "^10.4.4",
+    "classnames": "^2.3.2",
+    "cypress": "^13.4.0",
+    "events": "^3.3.0",
+    "flowbite": "^2.0.0",
+    "flowbite-react": "^0.6.4",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
+    "meteor-node-stubs": "^1.2.1",
+    "postcss": "^8.4.12",
+    "postcss-load-config": "^3.1.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sort-by": "^1.2.0",
+    "sweetalert2": "^11.10.8",
+    "tailwindcss": "^3.0.23",
+    "uniforms": "^4.0.0-alpha.5",
+    "uniforms-bridge-json-schema": "^4.0.0-alpha.5",
+    "uniforms-bridge-zod": "^4.0.0-alpha.5",
+    "uniforms-unstyled": "^4.0.0-alpha.5",
+    "zod": "^3.22.4"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "react-router-dom": "^6.18.0"
+  }
+}
