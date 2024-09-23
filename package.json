@@ -40,6 +40,7 @@
     "meteor-node-stubs": "^1.2.1",
     "postcss": "^8.4.12",
     "postcss-load-config": "^3.1.4",
+    "qrcode.react": "^4.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-loading-skeleton": "^3.5.0",
