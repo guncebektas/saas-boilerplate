@@ -63,7 +63,8 @@
     "uniforms-bridge-json-schema": "^4.0.0-alpha.5",
     "uniforms-bridge-zod": "^4.0.0-alpha.5",
     "uniforms-unstyled": "^4.0.0-alpha.5",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "zustand": "^5.0.0"
   },
   "meteor": {
     "mainModule": {
