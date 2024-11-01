@@ -7,6 +7,7 @@
     "start-warn-old-api": "MONGO_URL=mongodb://localhost:27017/saas WARN_WHEN_USING_OLD_API=true meteor --exclude-archs web.browser.legacy,web.cordova --settings settings.json --port 3001",
     "start-verbose": "MONGO_URL=mongodb://localhost:27017/saas NODE_OPTIONS=--trace-warnings meteor -s settings.json --port 3001 --verbose",
     "free-deploy": "meteor -s settings.json deploy saas-boilerplate.meteorapp.com --free --mongo",
+    "free-deploy-rewarita": "meteor -s settings.json deploy rewarita.meteorapp.com --free --mongo",
     "trace-warnings": "MONGO_URL=mongodb://localhost:27017/saas NODE_OPTIONS=--trace-warnings meteor -s settings.json --port 3001",
     "list": "meteor list --tree",
     "list-details": "meteor list --json --detais",
